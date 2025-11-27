@@ -90,32 +90,35 @@
               ];
           };
 
-        yoga7intel = lib.nixosSystem {
-          inherit system;
-
-          specialArgs = {
-            inherit inputs;
+        yoga7intel =
+          let
             host = "yoga7intel";
-          };
+          in
+          lib.nixosSystem {
+            inherit system;
 
-          modules =
-            laptopModules
-            ++ yogaModules
-            ++ [
-              ./nixos/hosts/laptop/len-yoga-7/default.nix
-              {
-                # 👇 pass inputs into HM modules
-                home-manager.extraSpecialArgs = {
-                  inherit (inputs)
-                    caelestia-shell
-                    host
-                    hyprgrass
-                    iio-hyprland
-                    ;
-                };
-              }
-            ];
-        };
+            specialArgs = {
+              inherit inputs host;
+            };
+
+            modules =
+              laptopModules
+              ++ yogaModules
+              ++ [
+                ./nixos/hosts/laptop/len-yoga-7/default.nix
+                {
+                  # 👇 pass inputs into HM modules
+                  home-manager.extraSpecialArgs = {
+                    inherit host;
+                    inherit (inputs)
+                      caelestia-shell
+                      hyprgrass
+                      iio-hyprland
+                      ;
+                  };
+                }
+              ];
+          };
 
         asus_g16 = lib.nixosSystem {
           inherit system;
