@@ -15,6 +15,7 @@
   ];
 
   programs.home-manager.enable = true;
+  home-manager.backupFileExtension = "backup";
 
   home.stateVersion = "25.11";
 }

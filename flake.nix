@@ -142,7 +142,7 @@
           ];
         };
 
-        desktop = lib.nixosSystem {
+        vengeance = lib.nixosSystem {
           inherit system;
           specialArgs = {
             host = "vengeance";
