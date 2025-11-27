@@ -21,6 +21,7 @@
     wget
     curl
     fastfetch
+    home-manager # for 'home-manager' command
     nil # nix language server for vscode
     ripgrep
     fd

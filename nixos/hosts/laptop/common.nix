@@ -7,8 +7,11 @@
 
   home-manager.nixosModules.home-manager
   {
-    home-manager.useGlobalPkgs = true;
-    home-manager.useUserPackages = true;
-    home-manager.users.dylan = import ../../../home/dylan/home.nix;
+    home-manager = {
+      useGlobalPkgs = true;
+      useUserPackages = true;
+      backupFileExtension = "backup";
+      users.dylan = import ../../../home/dylan/home.nix;
+    };
   }
 ]
