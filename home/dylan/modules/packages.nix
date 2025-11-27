@@ -38,6 +38,7 @@
     curl
     btop
     tmux
+    tealdeer # Rust impl of tldr package
 
     # Build tools
     gcc

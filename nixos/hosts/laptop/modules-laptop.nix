@@ -19,8 +19,12 @@
 
   #### lid behavior
   services.logind = {
-    lidSwitch = "suspend";
-    lidSwitchDocked = "ignore";
+    settings = {
+      Login = {
+        HandleLidSwitch = "suspend";
+        HandleLidSwitchDocked = "ignore";
+      };
+    };
   };
 
   #### bluetooth (usually relevant for all laptops)
