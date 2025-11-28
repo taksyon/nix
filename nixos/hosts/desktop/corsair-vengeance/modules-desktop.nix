@@ -1,4 +1,5 @@
 {
+  host,
   inputs,
   config,
   pkgs,
@@ -7,9 +8,7 @@
 }:
 
 {
-  imports = [
-    inputs.hyprland.nixosModules.default
-  ];
+
   #### Backlight + brightness control
 #  programs.light.enable = true;
 

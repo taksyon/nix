@@ -142,14 +142,27 @@
           ];
         };
 
-        vengeance = lib.nixosSystem {
+        vengeance =  
+          let
+            host = "vengeance";
+          in
+          lib.nixosSystem {
           inherit system;
           specialArgs = {
-            host = "vengeance";
+            inherit inputs host;
           };
 
           modules = [
-            ./nixos/hosts/desktop/default.nix
+            ./nixos/hosts/desktop/corsair-vengeance/default.nix
+                            {
+                  # 👇 pass inputs into HM modules
+                  home-manager.extraSpecialArgs = {
+                    inherit host;
+                    inherit (inputs)
+                      caelestia-shell
+                      ;
+                  };
+                }
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
