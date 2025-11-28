@@ -15,7 +15,10 @@
   };
 
   powerManagement.enable = true;
-  powerManagement.powertop.enable = true;
+
+  # powertop has USB auto-suspend default
+  # can make keyboard unresponsive after suspend
+  # powerManagement.powertop.enable = true;
 
   #### lid behavior
   services.logind = {

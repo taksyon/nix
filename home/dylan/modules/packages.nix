@@ -92,5 +92,7 @@
     xfce.thunar
     yazi
     pulseaudio
+    pipewire
+    pavucontrol
   ];
 }

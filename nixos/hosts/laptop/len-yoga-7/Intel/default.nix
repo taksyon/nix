@@ -7,6 +7,14 @@
     # ./modules-yoga7-intel.nix
   ];
 
+  boot.kernelModules = [
+    "i2c_hid"
+    "i2c_hid_acpi"
+    "hid_multitouch"
+  ];
+
+  hardware.enableAllFirmware = true;
+
   hardware.sensor.iio.enable = true;
 
   networking.hostName = "yoga7intel";

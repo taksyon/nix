@@ -3,9 +3,9 @@
 {
   imports = [
     # ./hardware-configuration.nix
-    ./modules/nixpkgs.nix
-    ./modules/networking.nix
     ./modules/audio.nix
+    ./modules/networking.nix
+    ./modules/nixpkgs.nix
     ./modules/users.nix
     ./modules/visual.nix
   ];

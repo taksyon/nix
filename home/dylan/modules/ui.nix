@@ -7,9 +7,10 @@ in
   gtk = {
     enable = true;
 
+    colorScheme = "dark";
     font = {
       name = "Cantarell";
-      size = 14;
+      size = 16;
     };
   };
   # xdg.configFile."gtk-3.0/gtk.css".source = "${src}/gtk/gtk-3.0/gtk.css";

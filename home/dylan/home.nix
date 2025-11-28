@@ -16,5 +16,12 @@
 
   programs.home-manager.enable = true;
 
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+    PAGER = "more";
+
+  };
+
   home.stateVersion = "25.11";
 }

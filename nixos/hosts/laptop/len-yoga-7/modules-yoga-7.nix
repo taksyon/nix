@@ -15,6 +15,12 @@
 
   hardware.sensor.iio.enable = true;
 
+  services.xserver.libinput = {
+    enable = true;
+  };
+
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   #### Power management
   services.tlp.enable = true;
 

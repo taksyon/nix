@@ -22,6 +22,7 @@
     curl
     fastfetch
     home-manager # for 'home-manager' command
+    libinput
     nil # nix language server for vscode
     ripgrep
     fd
