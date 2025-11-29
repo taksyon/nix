@@ -29,6 +29,7 @@
   environment.systemPackages = with pkgs; [
     foot
     hypridle
+    hyprlock
     wl-clipboard
     grim
     slurp

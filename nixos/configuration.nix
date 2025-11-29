@@ -14,6 +14,16 @@
   # boot.loader.efi.canTouchEfiVariables = true;
 
   boot = {
+    # kernel doesn't have rust support by default; enable it here
+    kernelPatches = [
+      {
+        name = "Rust support for Linux Kernel";
+        patch = null;
+        features = {
+          rust = true;
+        };
+      }
+    ];
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
 
