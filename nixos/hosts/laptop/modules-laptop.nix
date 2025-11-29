@@ -36,6 +36,7 @@
 
   #### generic laptop tools
   environment.systemPackages = with pkgs; [
+    brightnessctl
     powertop
     tlp
     blueman

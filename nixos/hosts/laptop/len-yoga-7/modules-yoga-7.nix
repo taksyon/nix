@@ -64,11 +64,6 @@
   #### generic laptop tools
   environment.systemPackages = with pkgs; [
     wvkbd
-    brightnessctl
     iio-sensor-proxy
-    powertop
-    tlp
-    blueman
-    acpi
   ];
 }

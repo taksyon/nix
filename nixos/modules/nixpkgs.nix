@@ -16,7 +16,17 @@
   };
 
   environment.systemPackages = with pkgs; [
+    alsa-utils
+    audacity
+    bat
+    bat-extras.core
+    btop
+    efibootmgr
     git
+    gparted
+    input-remapper
+    jq
+    mlocate
     neovim
     wget
     curl
@@ -30,5 +40,8 @@
     tmux
     htop
     vscode
+    xournalpp
+    zathura
+    zathura-pdf-mupdf
   ];
 }
