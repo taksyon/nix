@@ -10,8 +10,26 @@
     ./modules/visual.nix
   ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # boot.loader.systemd-boot.enable = true;
+  # boot.loader.efi.canTouchEfiVariables = true;
+
+  boot = {
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
+
+    plymouth = {
+      enable = true;
+      theme = "rings";
+      themePackages = with pkgs; [
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "rings" ];
+        })
+      ];
+    };
+
+
+  };
+
 
   time.timeZone = "America/New_York";
 
@@ -29,7 +47,7 @@
   };
 
   console.keyMap = "us";
-	programs.firefox.enable = true;
+  programs.firefox.enable = true;
   services.openssh.enable = true;
   system.stateVersion = "25.11";
 }
