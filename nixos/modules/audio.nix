@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  services.pulseaudio.enable = true;
+  services.pulseaudio.enable = false;
 
   security.rtkit.enable = true;
 
