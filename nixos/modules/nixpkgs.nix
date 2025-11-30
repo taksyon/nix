@@ -45,12 +45,14 @@
     htop
     input-remapper
     jq
+    kitty
     mlocate
     neovim
     onlyoffice-desktopeditors
     wget
     curl
     fastfetch
+    font-manager
     home-manager
     libinput
     mpv

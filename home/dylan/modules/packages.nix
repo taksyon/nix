@@ -27,6 +27,7 @@
     # Utilities
     zip
     unzip
+    # ckb-next
     p7zip
     tree
     fastfetch

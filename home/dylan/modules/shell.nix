@@ -1,6 +1,23 @@
 { config, pkgs, ... }:
 
 {
+  # foot
+  programs.foot = {
+    enable = true;
+
+    settings = {
+      main = {
+        font = "Hack Nerd Font Mono:size=14";
+        dpi-aware = "yes";
+      };
+      scrollback = {
+        lines = 10000;
+        multiplier = 3.0;
+      };
+    };
+  };
+
+  # fish
   programs.fish = {
     enable = true;
 
@@ -14,7 +31,7 @@
 
       javadocs = "javadoc -d ./docs -sourcepath . *.java";
       fetch = "fastfetch";
-      binds = "moar ~/.config/keybindings.md";
+      binds = "more ~/.config/keybindings.md";
       qtheme = "qt6ct";
 
       ip = "ip -c"; # -c = colorize
