@@ -41,26 +41,51 @@ in
       environment = [ ];
     };
     settings = {
-      bar.clock.showIcon = false;
-      bar.status = {
-        showAudio = true;
-        showBattery = true;
+      appearance = {
+        font = {
+          family = {
+            clock = "Rubik";
+            material = "Material Symbols Rounded";
+            mono = "Hack Nerd Font Mono";
+            sans = "Rubik";
+          };
+          size.scale = 1.3;
+        };
+        padding.scale = 1;
+        rounding.scale = 1;
+        spacing.scale = 1;
+        transparency = {
+          enabled = true;
+          base = 0.85;
+          layers = 0.4;
+        };
+      };
+
+      bar = {
+        clock.showIcon = false;
+        status = {
+          showAudio = true;
+          showBattery = true;
+        };
       };
 
       general = {
         # battery = {
         # warnLevels = [];
         # };
-
         idle = {
           timeouts = [
             {
-              timeout = 360;
+              timeout = 800;
+              idleAction = "lock";
+            }
+            {
+              timeout = 1200;
               idleAction = "dpms off";
               returnAction = "dpms on";
             }
             {
-              timeout = 900;
+              timeout = 1600;
               idleAction = [
                 "systemctl"
                 "suspend-then-hibernate"
@@ -74,7 +99,15 @@ in
     cli = {
       enable = true; # Also add caelestia-cli to path
       settings = {
-        theme.enableGtk = true;
+
+        theme = {
+          enableBtop = true;
+          enableDiscord = true;
+          enableHypr = true;
+          enableTerm = true;
+          enableGtk = true;
+          enableQt = true;
+        };
       };
     };
   };
