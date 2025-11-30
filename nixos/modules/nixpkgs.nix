@@ -37,9 +37,12 @@
     blueman
     brightnessctl
     btop
+    curl
     efibootmgr
+    elegant-sddm
     fastfetch
     fd
+    font-manager
     git
     gparted
     htop
@@ -48,15 +51,12 @@
     kitty
     mlocate
     neovim
-    onlyoffice-desktopeditors
-    wget
-    curl
-    fastfetch
-    font-manager
     home-manager
     libinput
+    # lxqt
     mpv
     nil # nix language server for vscode
+    onlyoffice-desktopeditors
     prismlauncher
     python3
     qbittorrent

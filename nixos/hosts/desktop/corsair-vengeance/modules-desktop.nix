@@ -21,7 +21,7 @@
   hardware.cpu.intel.updateMicrocode = true;
   hardware.enableRedistributableFirmware = true;
 
-  hardware.ckb-next.enable = true;
+  # hardware.ckb-next.enable = true;
 
   hardware.graphics = {
     enable = true;
@@ -83,6 +83,8 @@
   #### Laptop-specific packages
   environment.systemPackages = with pkgs; [
     #wvkbd
+    # ckb-next
+    openrgb
     brightnessctl
     #iio-sensor-proxy
     # inputs.iio-hyprland.packages.${pkgs.system}.default

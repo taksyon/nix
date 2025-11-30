@@ -27,7 +27,6 @@
     # Utilities
     zip
     unzip
-    # ckb-next
     p7zip
     tree
     fastfetch
@@ -89,7 +88,6 @@
     jdk21
     nixfmt
     xournalpp
-    lxqt
     node2nix
     prismlauncher
     xfce.thunar

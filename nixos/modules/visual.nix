@@ -11,6 +11,12 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
+    theme = "elegant-sddm";
+  };
+  qt = {
+    enable = true;
+    style = "adwaita-highcontrast";
+    platformTheme = "lxqt";
   };
 
   environment.sessionVariables = {
@@ -22,6 +28,12 @@
   # Wayland portals (screenshare, file pickers, etc.)
   xdg.portal = {
     enable = true;
+    lxqt = {
+      enable = true;
+      styles = [
+        pkgs.libsForQt5.qtstyleplugin-kvantum
+      ];
+    };
     # extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
   };
 
@@ -32,8 +44,6 @@
     wl-clipboard
     grim
     slurp
-    haskellPackages.qt
-    qtbase
-    qt-full
+    # haskellPackages.qt
   ];
 }
