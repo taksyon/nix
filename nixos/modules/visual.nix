@@ -8,6 +8,18 @@
 
   };
 
+  services.hardware.openrgb = {
+    enable = true;
+    # optional if you want plugins:
+    package = pkgs.openrgb-with-all-plugins;
+  };
+  # If you aren’t already in the right groups:
+  users.users.dylan.extraGroups = [
+    "i2c"
+    "video"
+    "input"
+  ];
+
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
@@ -41,6 +53,7 @@
     foot
     hypridle
     hyprlock
+    kdePackages.qt6ct
     wl-clipboard
     grim
     slurp

@@ -57,6 +57,7 @@
     mpv
     nil # nix language server for vscode
     onlyoffice-desktopeditors
+    openrgb-with-all-plugins
     prismlauncher
     python3
     qbittorrent
