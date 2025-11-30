@@ -41,8 +41,33 @@ in
       environment = [ ];
     };
     settings = {
+      bar.clock.showIcon = false;
       bar.status = {
+        showAudio = true;
         showBattery = true;
+      };
+
+      general = {
+        # battery = {
+        # warnLevels = [];
+        # };
+
+        idle = {
+          timeouts = [
+            {
+              timeout = 360;
+              idleAction = "dpms off";
+              returnAction = "dpms on";
+            }
+            {
+              timeout = 900;
+              idleAction = [
+                "systemctl"
+                "suspend-then-hibernate"
+              ];
+            }
+          ];
+        };
       };
       paths.wallpaperDir = "~/Pictures/wallpapers";
     };

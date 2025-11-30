@@ -1,6 +1,7 @@
 { config, pkgs, ... }@inputs:
 
 {
+  # TODO: convert caelestia config -> here
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
