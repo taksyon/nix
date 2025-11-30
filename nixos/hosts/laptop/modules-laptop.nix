@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   #### Generic laptop hostname override (optional)
@@ -9,9 +14,9 @@
 
   services.tlp.settings = {
     CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-    CPU_SCALING_GOVERNOR_ON_AC  = "performance";
+    CPU_SCALING_GOVERNOR_ON_AC = "performance";
     WIFI_PWR_ON_BAT = "on";
-    WIFI_PWR_ON_AC  = "off";
+    WIFI_PWR_ON_AC = "off";
   };
 
   powerManagement.enable = true;

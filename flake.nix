@@ -142,36 +142,36 @@
           ];
         };
 
-        vengeance =  
+        vengeance =
           let
             host = "vengeance";
           in
           lib.nixosSystem {
-          inherit system;
-          specialArgs = {
-            inherit inputs host;
-          };
+            inherit system;
+            specialArgs = {
+              inherit inputs host;
+            };
 
-          modules = [
-            ./nixos/hosts/desktop/corsair-vengeance/default.nix
-                            {
-                  # 👇 pass inputs into HM modules
-                  home-manager.extraSpecialArgs = {
-                    inherit host;
-                    inherit (inputs)
-                      caelestia-shell
-                      ;
-                  };
-                }
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.dylan = import ./home/dylan/home.nix;
-              home-manager.backupFileExtension = "backup";
-            }
-          ];
-        };
+            modules = [
+              ./nixos/hosts/desktop/corsair-vengeance/default.nix
+              {
+                # 👇 pass inputs into HM modules
+                home-manager.extraSpecialArgs = {
+                  inherit host;
+                  inherit (inputs)
+                    caelestia-shell
+                    ;
+                };
+              }
+              home-manager.nixosModules.home-manager
+              {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.users.dylan = import ./home/dylan/home.nix;
+                home-manager.backupFileExtension = "backup";
+              }
+            ];
+          };
       };
     };
 }
