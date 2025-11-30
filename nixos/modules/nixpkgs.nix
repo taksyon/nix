@@ -54,6 +54,11 @@
     mlocate
     neovim
     home-manager
+
+    util-linux
+    kmod
+    i2c-tools
+
     libinput
     # lxqt
     mpv
