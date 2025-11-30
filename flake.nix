@@ -168,6 +168,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.dylan = import ./home/dylan/home.nix;
+              home-manager.backupFileExtension = "backup";
             }
           ];
         };

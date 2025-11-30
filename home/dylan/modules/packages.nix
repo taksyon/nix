@@ -22,6 +22,7 @@
     mangohud
     wine
     winetricks
+    cabextract
 
     # Utilities
     zip
