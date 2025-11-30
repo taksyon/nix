@@ -13,7 +13,7 @@
       "flakes"
     ];
     auto-optimise-store = true;
-    download-buffer-size = "512MiB";
+    # download-buffer-size = "512MiB";
   };
 
   fonts.packages = with pkgs; [
@@ -49,11 +49,8 @@
     htop
     input-remapper
     jq
-<<<<<<< HEAD
     kitty
-=======
     linux-firmware
->>>>>>> 3c39016 (sound)
     mlocate
     neovim
     home-manager

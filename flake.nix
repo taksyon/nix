@@ -153,6 +153,7 @@
             };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
           modules = [
@@ -177,6 +178,8 @@
         };
 =======
 >>>>>>> d65e192 (sound stuff)
+=======
+>>>>>>> 179ebc1 (updates)
             modules = [
               ./nixos/hosts/desktop/corsair-vengeance/default.nix
               {
@@ -202,8 +205,11 @@
               }
             ];
           };
+<<<<<<< HEAD
 >>>>>>> 3c39016 (sound)
 >>>>>>> d65e192 (sound stuff)
+=======
+>>>>>>> 179ebc1 (updates)
       };
     };
 }
