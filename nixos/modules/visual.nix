@@ -25,7 +25,6 @@
     # extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
   };
 
-  # GUI apps / tools related to the Hyprland desktop
   environment.systemPackages = with pkgs; [
     foot
     hypridle
@@ -33,5 +32,8 @@
     wl-clipboard
     grim
     slurp
+    haskellPackages.qt
+    qtbase
+    qt-full
   ];
 }

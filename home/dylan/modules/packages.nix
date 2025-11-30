@@ -89,6 +89,7 @@
     jdk21
     nixfmt
     xournalpp
+    lxqt
     node2nix
     prismlauncher
     xfce.thunar
