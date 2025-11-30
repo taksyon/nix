@@ -7,8 +7,12 @@
 
     settings = {
       main = {
-        font = "Hack Nerd Font Mono:size=14";
+        font = "Hack Nerd Font Mono:size=10";
         dpi-aware = "yes";
+      };
+      colors = {
+        alpha = 0.8;
+        background = "000000";
       };
       scrollback = {
         lines = 10000;
