@@ -152,6 +152,31 @@
               inherit inputs host;
             };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          modules = [
+            ./nixos/hosts/desktop/corsair-vengeance/default.nix
+                            {
+                  # 👇 pass inputs into HM modules
+                  home-manager.extraSpecialArgs = {
+                    inherit host;
+                    inherit (inputs)
+                      caelestia-shell
+                      ;
+                  };
+                }
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.dylan = import ./home/dylan/home.nix;
+              home-manager.backupFileExtension = "backup";
+            }
+          ];
+        };
+=======
+>>>>>>> d65e192 (sound stuff)
             modules = [
               ./nixos/hosts/desktop/corsair-vengeance/default.nix
               {
@@ -168,10 +193,17 @@
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
                 home-manager.users.dylan = import ./home/dylan/home.nix;
+<<<<<<< HEAD
                 home-manager.backupFileExtension = "backup";
               }
             ];
           };
+=======
+              }
+            ];
+          };
+>>>>>>> 3c39016 (sound)
+>>>>>>> d65e192 (sound stuff)
       };
     };
 }

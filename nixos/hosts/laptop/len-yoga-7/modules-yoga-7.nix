@@ -15,7 +15,7 @@
 
   hardware.sensor.iio.enable = true;
 
-  services.xserver.libinput = {
+  services.libinput = {
     enable = true;
   };
 
