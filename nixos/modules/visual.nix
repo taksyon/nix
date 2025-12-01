@@ -37,10 +37,11 @@
     wayland.enable = true;
     theme = "elegant-sddm";
   };
+
   qt = {
     enable = true;
     style = "adwaita-highcontrast";
-    platformTheme = "lxqt";
+    platformTheme = "qt5ct";
   };
 
   environment.sessionVariables = {
@@ -86,6 +87,5 @@
     kdePackages.qt5compat
 
     slurp
-    # haskellPackages.qt
   ];
 }
