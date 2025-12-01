@@ -57,5 +57,6 @@
   console.keyMap = "us";
   programs.firefox.enable = true;
   services.openssh.enable = true;
+  services.locate.enable = true; # enables 'locate' command
   system.stateVersion = "25.11";
 }
