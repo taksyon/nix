@@ -41,34 +41,34 @@ treeview,
 list,
 listview,
 iconview {
-  background-color: @bg_color;
-  color: @fg_color;
+    background-color: @bg_color;
+    color: @fg_color;
 }
 
 /* main app background */
 window.background,
 dialog.background {
-  background-color: @bg_color;
-  color: @fg_color;
+    background-color: @bg_color;
+    color: @fg_color;
 }
 
 /*************  HEADERBAR / TITLEBAR  *************/
 headerbar,
 .titlebar,
 .header-bar,
-window > headerbar {
-  background: @bg_header_color;
-  color: @fg_color;
-  border-bottom: 1px solid @border_color;
-  box-shadow:
-    inset 0 -1px 0 @border_soft_color,
-    0 0 0 1px rgba(0, 0, 0, 0.7);
+window>headerbar {
+    background: @bg_header_color;
+    color: @fg_color;
+    border-bottom: 1px solid @border_color;
+    box-shadow:
+        inset 0 -1px 0 @border_soft_color,
+        0 0 0 1px rgba(0, 0, 0, 0.7);
 }
 
 headerbar .title,
 headerbar .subtitle,
 .titlebar .title {
-  color: @fg_color;
+    color: @fg_color;
 }
 
 /*************  TOOLBARS / MENUBARS / STATUSBARS  *************/
@@ -83,10 +83,10 @@ menubar,
 statusbar,
 .statusbar,
 .action-bar {
-  background-color: @bg_panel_color;
-  color: @fg_color;
-  border-color: @border_soft_color;
-  border-top: 1px solid @border_soft_color;
+    background-color: @bg_panel_color;
+    color: @fg_color;
+    border-color: @border_soft_color;
+    border-top: 1px solid @border_soft_color;
 }
 
 /* buttons inside toolbars/statusbars still look like normal buttons */
@@ -95,15 +95,15 @@ toolbar button,
 statusbar button,
 .statusbar button,
 .action-bar button {
-  background-color: @bg_panel_color;
-  color: @fg_color;
+    background-color: @bg_panel_color;
+    color: @fg_color;
 }
 
 /* separators inside bars */
 toolbar separator,
 .statusbar separator,
 .menubar separator {
-  background-color: @border_soft_color;
+    background-color: @border_soft_color;
 }
 
 /*************  PANELS / FRAMES / SIDEBARS  *************/
@@ -112,78 +112,78 @@ frame,
 .sidebar,
 .sidebar view,
 stacksidebar,
-notebook > header,
-notebook > header > tabs > tab {
-  background-color: @bg_panel_color;
-  color: @fg_color;
+notebook>header,
+notebook>header>tabs>tab {
+    background-color: @bg_panel_color;
+    color: @fg_color;
 }
 
-frame > border,
-.frame > border,
-notebook > header {
-  border: 1px solid @border_color;
-  box-shadow: 0 0 0 1px rgba(92, 153, 168, 0.35);
+frame>border,
+.frame>border,
+notebook>header {
+    border: 1px solid @border_color;
+    box-shadow: 0 0 0 1px rgba(92, 153, 168, 0.35);
 }
 
 /*************  NOTEBOOK TABS  *************/
-notebook > header > tabs > tab {
-  padding: 4px 10px;
-  border: 1px solid @border_soft_color;
-  border-bottom: none;
-  background: @bg_panel_color;
+notebook>header>tabs>tab {
+    padding: 4px 10px;
+    border: 1px solid @border_soft_color;
+    border-bottom: none;
+    background: @bg_panel_color;
 }
 
-notebook > header > tabs > tab:checked {
-  background: @bg_header_color;
-  border-color: @border_color;
-  box-shadow: 0 0 0 1px rgba(92, 153, 168, 0.5);
+notebook>header>tabs>tab:checked {
+    background: @bg_header_color;
+    border-color: @border_color;
+    box-shadow: 0 0 0 1px rgba(92, 153, 168, 0.5);
 }
 
 /*************  BUTTONS  *************/
 button,
 button.flat,
 button.text-button {
-  background-image: none;
-  background-color: @bg_panel_color;
-  color: @fg_color;
-  border-radius: 6px;
-  border: 1px solid @border_soft_color;
-  padding: 3px 10px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7);
+    background-image: none;
+    background-color: @bg_panel_color;
+    color: @fg_color;
+    border-radius: 6px;
+    border: 1px solid @border_soft_color;
+    padding: 3px 10px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7);
 }
 
 button:hover {
-  background-color: shade(@bg_panel_color, 1.2);
-  border-color: @border_color;
-  box-shadow:
-    0 0 0 1px rgba(92, 153, 168, 0.5),
-    0 0 6px 1px rgba(92, 153, 168, 0.65);
+    background-color: shade(@bg_panel_color, 1.2);
+    border-color: @border_color;
+    box-shadow:
+        0 0 0 1px rgba(92, 153, 168, 0.5),
+        0 0 6px 1px rgba(92, 153, 168, 0.65);
 }
 
 button:active,
 button:checked {
-  background-color: @accent_soft_color;
-  border-color: @accent_color;
-  box-shadow:
-    0 0 0 1px rgba(92, 153, 168, 0.9),
-    0 0 10px 1px rgba(92, 153, 168, 0.9);
+    background-color: @accent_soft_color;
+    border-color: @accent_color;
+    box-shadow:
+        0 0 0 1px rgba(92, 153, 168, 0.9),
+        0 0 10px 1px rgba(92, 153, 168, 0.9);
 }
 
 /* suggested / default buttons */
 button.suggested-action {
-  background-color: @accent_color;
-  border-color: @accent_color;
-  color: #ffffff;
+    background-color: @accent_color;
+    border-color: @accent_color;
+    color: #ffffff;
 }
 
 button.suggested-action:hover {
-  background-color: shade(@accent_color, 1.15);
+    background-color: shade(@accent_color, 1.15);
 }
 
 /* destructive buttons */
 button.destructive-action {
-  background-color: @error_color;
-  border-color: @error_color;
+    background-color: @error_color;
+    border-color: @error_color;
 }
 
 /*************  ENTRY / TEXT FIELD  *************/
@@ -191,19 +191,19 @@ entry,
 textview,
 .search,
 .search-entry {
-  background-color: @bg_panel_color;
-  color: @fg_color;
-  border-radius: 4px;
-  border: 1px solid @border_soft_color;
-  padding: 2px 6px;
+    background-color: @bg_panel_color;
+    color: @fg_color;
+    border-radius: 4px;
+    border: 1px solid @border_soft_color;
+    padding: 2px 6px;
 }
 
 entry:focus,
 textview:focus-within {
-  border-color: @accent_color;
-  box-shadow:
-    0 0 0 1px rgba(92, 153, 168, 0.8),
-    0 0 6px 1px rgba(92, 153, 168, 0.8);
+    border-color: @accent_color;
+    box-shadow:
+        0 0 0 1px rgba(92, 153, 168, 0.8),
+        0 0 6px 1px rgba(92, 153, 168, 0.8);
 }
 
 /*************  SELECTION / CARET  *************/
@@ -212,34 +212,34 @@ textview text selection,
 .view text selection,
 text selection,
 *:selected {
-  background-color: @selection_bg_color;
-  color: @selection_fg_color;
+    background-color: @selection_bg_color;
+    color: @selection_fg_color;
 }
 
 textview text,
 .view text {
-  caret-color: @accent_purple;
+    caret-color: @accent_purple;
 }
 
 /*************  LISTS / ROWS  *************/
 row,
 list row,
 listview row {
-  background-color: @bg_color;
-  border-bottom: 1px solid rgba(92, 153, 168, 0.15);
+    background-color: @bg_color;
+    border-bottom: 1px solid rgba(92, 153, 168, 0.15);
 }
 
 row:selected,
 list row:selected,
 listview row:selected {
-  background-color: @selection_bg_color;
-  color: @selection_fg_color;
+    background-color: @selection_bg_color;
+    color: @selection_fg_color;
 }
 
 row:hover,
 list row:hover,
 listview row:hover {
-  background-color: @bg_alt_color;
+    background-color: @bg_alt_color;
 }
 
 /*************  DIALOG ACTION AREA (OK/Cancel bar) *************/
@@ -252,129 +252,129 @@ dialog .action-bar,
 dialog .buttonbox,
 dialog .action-area,
 .action-area {
-  background-color: @bg_panel_color;
-  border-top: 1px solid @border_soft_color;
-  color: @fg_color;
+    background-color: @bg_panel_color;
+    border-top: 1px solid @border_soft_color;
+    color: @fg_color;
 }
 
 dialog .dialog-action-area button,
 .action-bar button,
 .buttonbox button {
-  background-color: @bg_panel_color;
-  color: @fg_color;
+    background-color: @bg_panel_color;
+    color: @fg_color;
 }
 
 
 /*************  CHECK / RADIO  *************/
 checkbutton,
 radiobutton {
-  color: @fg_color;
+    color: @fg_color;
 }
 
 check,
 radio {
-  border-radius: 2px;
-  border: 1px solid @border_soft_color;
-  background-color: @bg_panel_color;
+    border-radius: 2px;
+    border: 1px solid @border_soft_color;
+    background-color: @bg_panel_color;
 }
 
 check:checked,
 radio:checked {
-  background-color: @accent_color;
-  border-color: @accent_color;
+    background-color: @accent_color;
+    border-color: @accent_color;
 }
 
 /*************  SCROLLBARS  *************/
 scrollbar {
-  background-color: @bg_color;
+    background-color: @bg_color;
 }
 
 scrollbar slider {
-  background-color: @bg_panel_color;
-  border-radius: 999px;
-  border: 1px solid @border_soft_color;
+    background-color: @bg_panel_color;
+    border-radius: 999px;
+    border: 1px solid @border_soft_color;
 }
 
 scrollbar slider:hover {
-  background-color: @accent_soft_color;
-  border-color: @accent_color;
+    background-color: @accent_soft_color;
+    border-color: @accent_color;
 }
 
 /*************  SCALE / SLIDER  *************/
 scale trough {
-  background-color: @bg_panel_color;
-  border-radius: 999px;
-  border: 1px solid @border_soft_color;
+    background-color: @bg_panel_color;
+    border-radius: 999px;
+    border: 1px solid @border_soft_color;
 }
 
 scale highlight,
 scale fill,
 scale slider {
-  background-color: @accent_color;
+    background-color: @accent_color;
 }
 
 scale slider {
-  border-radius: 999px;
-  min-width: 12px;
-  min-height: 12px;
+    border-radius: 999px;
+    min-width: 12px;
+    min-height: 12px;
 }
 
 /*************  TOOLTIP  *************/
 tooltip,
 tooltip.background {
-  background-color: @bg_panel_color;
-  color: @fg_color;
-  border-radius: 6px;
-  border: 1px solid @border_color;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    background-color: @bg_panel_color;
+    color: @fg_color;
+    border-radius: 6px;
+    border: 1px solid @border_color;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
 
 /*************  LINKS / LABELS  *************/
 label {
-  color: @fg_color;
+    color: @fg_color;
 }
 
 label.dim-label,
 label.subtitle,
 label.small-label {
-  color: @fg_muted_color;
+    color: @fg_muted_color;
 }
 
 label.link,
 .link,
 a {
-  color: @link_color;
+    color: @link_color;
 }
 
 /*************  PROGRESSBARS  *************/
 progressbar trough {
-  background-color: @bg_panel_color;
-  border-radius: 999px;
-  border: 1px solid @border_soft_color;
+    background-color: @bg_panel_color;
+    border-radius: 999px;
+    border: 1px solid @border_soft_color;
 }
 
 progressbar progress {
-  background-color: @accent_color;
-  border-radius: 999px;
+    background-color: @accent_color;
+    border-radius: 999px;
 }
 
 /*************  INSENSITIVE  *************/
 *:disabled,
 *:insensitive {
-  color: @insensitive_fg;
-  background-color: shade(@bg_color, 1.02);
-  border-color: shade(@border_soft_color, 0.9);
+    color: @insensitive_fg;
+    background-color: shade(@bg_color, 1.02);
+    border-color: shade(@border_soft_color, 0.9);
 }
 
 /*************  MISC  *************/
 /* rounded corners + neon-ish outline for dialogs */
 dialog,
 window.csd {
-  border-radius: 14px;
-  border: 1px solid @border_color;
-  box-shadow:
-    0 0 0 1px rgba(92, 153, 168, 0.4),
-    0 0 24px 2px rgba(92, 153, 168, 0.40);
+    border-radius: 14px;
+    border: 1px solid @border_color;
+    box-shadow:
+        0 0 0 1px rgba(92, 153, 168, 0.4),
+        0 0 24px 2px rgba(92, 153, 168, 0.40);
 }
 
 /*************  MENUS / POPOVERS / CONTEXT MENUS  *************/
@@ -383,12 +383,12 @@ menu,
 .context-menu,
 popover,
 popover.background {
-  background-color: @bg_panel_color;
-  color: @fg_color;
-  border: 1px solid @border_soft_color;
-  box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.75),
-    0 0 0 1px rgba(0, 0, 0, 0.9);
+    background-color: @bg_panel_color;
+    color: @fg_color;
+    border: 1px solid @border_soft_color;
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.75),
+        0 0 0 1px rgba(0, 0, 0, 0.9);
 }
 
 /* individual menu items */
@@ -396,9 +396,9 @@ menu menuitem,
 .menu menuitem,
 popover modelbutton,
 popover button {
-  background-color: transparent;
-  color: @fg_color;
-  padding: 4px 10px;
+    background-color: transparent;
+    color: @fg_color;
+    padding: 4px 10px;
 }
 
 /* hover / selected state */
@@ -408,14 +408,13 @@ menu menuitem:selected,
 .menu menuitem:selected,
 popover modelbutton:hover,
 popover button:hover {
-  background-color: @selection_bg_color;
-  color: @selection_fg_color;
+    background-color: @selection_bg_color;
+    color: @selection_fg_color;
 }
 
 /* separators in menus */
 menu separator,
 .menu separator {
-  background-color: @border_soft_color;
-  min-height: 1px;
+    background-color: @border_soft_color;
+    min-height: 1px;
 }
-
