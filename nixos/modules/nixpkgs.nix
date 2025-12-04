@@ -38,6 +38,7 @@
     blueman
     brightnessctl
     btop
+    clang-tools
     curl
     efibootmgr
     elegant-sddm
