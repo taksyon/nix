@@ -14,7 +14,7 @@
     mpv
 
     # Gaming
-    steam
+    # steam
     lutris
     heroic
     mangohud
@@ -90,7 +90,6 @@
     xournalpp
     node2nix
     prismlauncher
-    xfce.thunar
     yazi
     pulseaudio
     # pipewire

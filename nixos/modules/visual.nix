@@ -8,6 +8,18 @@
 
   };
 
+  programs.thunar = {
+    enable = true;
+    plugins = with pkgs.xfce; [
+      thunar-archive-plugin
+      thunar-volman
+    ];
+  };
+
+  programs.xfconf.enable = true; # settings for thunar?
+  services.gvfs.enable = true; # Mount, trash, and other functionalities
+  services.tumbler.enable = true; # Thumbnail support for images
+
   services.hardware.openrgb = {
     enable = true;
     # optional if you want plugins:
@@ -15,7 +27,7 @@
   };
   # If you aren’t already in the right groups:
   users.users.dylan.extraGroups = [
-    "i2c"
+    # "i2c"
     "video"
     "input"
   ];
@@ -47,6 +59,16 @@
       ];
     };
     # extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+  };
+
+  # VR
+  services.monado = {
+    enable = true;
+    defaultRuntime = true; # Register as default OpenXR runtime
+  };
+  systemd.user.services.monado.environment = {
+    STEAMVR_LH_ENABLE = "1";
+    XRT_COMPOSITOR_COMPUTE = "1";
   };
 
   environment.systemPackages = with pkgs; [

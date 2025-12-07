@@ -16,6 +16,18 @@
     # download-buffer-size = "512MiB";
   };
 
+  programs.git = {
+    enable = true;
+    lfs.enable = true;
+  };
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+
+  };
+
   fonts.packages = with pkgs; [
     nerd-fonts.droid-sans-mono
     nerd-fonts.fira-code
@@ -47,6 +59,8 @@
     font-manager
     git
     gparted
+    gnome.gvfs
+    # gvfs
     htop
     input-remapper
     jq
@@ -69,6 +83,7 @@
     prismlauncher
     python3
     qbittorrent
+    quickshell
     ripgrep
     sof-firmware
     sof-tools

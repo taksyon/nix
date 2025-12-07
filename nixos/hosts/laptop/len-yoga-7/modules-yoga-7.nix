@@ -19,8 +19,6 @@
     enable = true;
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   boot.kernelModules = [ "i2c-dev" ];
 
   systemd.services.turn-on-speakers = {

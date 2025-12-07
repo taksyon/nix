@@ -13,14 +13,14 @@ let
   isG16 = host == "g16";
 
   hyprVars =
-    # if isYoga7Intel then
-    #   "${src}/caelestia/yoga7-vars.conf"
+    if isYoga7Intel then
+      "${src}/caelestia/yoga7intel-vars.conf"
     # else if isVengeance then
     #   "${src}/caelestia/vengeance-vars.conf"
     # else if isG16 then
     #   "${src}/caelestia/g16-vars.conf"
-    # else
-    "${src}/caelestia/hypr-vars.conf";
+    else
+      "${src}/caelestia/hypr-vars.conf";
 
   hyprUser =
     if isYoga7Intel then
@@ -95,7 +95,7 @@ in
           ];
         };
       };
-      paths.wallpaperDir = "~/Pictures/wallpapers";
+      paths.wallpaperDir = "~/Pictures/Wallpapers";
     };
     cli = {
       enable = true; # Also add caelestia-cli to path

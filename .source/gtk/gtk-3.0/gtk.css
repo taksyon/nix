@@ -418,3 +418,66 @@ menu separator,
     background-color: @border_soft_color;
     min-height: 1px;
 }
+
+/*************  DIALOG CONTENT / NOTEBOOK PAGES  *************/
+/* Content area inside dialogs (like Thunar Properties) */
+dialog > box,
+dialog > box > box,
+dialog > box > grid,
+dialog .dialog-vbox,
+dialog .dialog-vbox > box,
+dialog .dialog-vbox > grid {
+  background-color: @bg_panel_color;
+  color: @fg_color;
+}
+
+/* Notebook body (tabs are already themed, this does the page area) */
+notebook,
+notebook > stack,
+notebook > stack > box,
+notebook > stack > grid,
+notebook > stack > scrolledwindow,
+notebook > stack > viewport {
+  background-color: @bg_panel_color;
+  color: @fg_color;
+}
+
+/*************  INFOBARS (warnings / missing dependencies) *************/
+infobar,
+.info,
+.question,
+.warning,
+.error {
+  background-color: shade(@bg_panel_color, 1.05);
+  color: @fg_color;
+  border: 1px solid @border_soft_color;
+}
+
+infobar label,
+.info label,
+.question label,
+.warning label,
+.error label {
+  color: @fg_color;
+}
+
+/*************  TOGGLE BUTTONS (emblems / highlight tiles) *************/
+togglebutton,
+button.toggle {
+  background-color: @bg_panel_color;
+  color: @fg_color;
+  border-radius: 4px;
+  border: 1px solid @border_soft_color;
+  padding: 2px 4px;
+}
+
+togglebutton:hover,
+button.toggle:hover {
+  background-color: shade(@bg_panel_color, 1.15);
+}
+
+togglebutton:checked,
+button.toggle:checked {
+  background-color: @accent_soft_color;
+  border-color: @accent_color;
+}

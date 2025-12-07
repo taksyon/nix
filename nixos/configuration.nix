@@ -14,6 +14,8 @@
   # boot.loader.efi.canTouchEfiVariables = true;
 
   boot = {
+    kernelPackages = pkgs.linuxPackages_testing;
+
     # kernel doesn't have rust support by default; enable it here
     kernelPatches = [
       {
