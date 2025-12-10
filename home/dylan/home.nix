@@ -11,6 +11,7 @@
     ./modules/packages.nix
     ./modules/shell.nix
     ./modules/ui.nix
+    ./modules/zathura.nix
     # ./modules/neovim.nix
   ];
 

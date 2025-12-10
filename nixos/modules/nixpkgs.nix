@@ -25,8 +25,18 @@
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
-
+    package = pkgs.steam.override {
+      extraProfile = ''
+        # Fixes timezones on VRChat
+        unset TZ
+        # Allows Monado to be used
+        export PRESSURE_VESSEL_IMPORT_OPENXR_1_RUNTIMES=1
+      '';
+    };
   };
+
+  programs.alvr.enable = true;
+  programs.alvr.openFirewall = true;
 
   fonts.packages = with pkgs; [
     nerd-fonts.droid-sans-mono
@@ -45,61 +55,85 @@
     alsa-utils
     alsa-ucm-conf
     audacity
+
     bat
     bat-extras.core
     blueman
     brightnessctl
     btop
+
     clang-tools
     curl
+
     efibootmgr
     elegant-sddm
+
     fastfetch
     fd
     font-manager
+
     git
     gparted
     gnome.gvfs
-    # gvfs
-    htop
-    input-remapper
-    jq
-    kitty
-    linux-firmware
-    mlocate
-    neovim
+
     home-manager
+    htop
 
-    util-linux
-    kmod
     i2c-tools
+    input-remapper
 
+    jq
+
+    kitty
+    kmod
+
+    lftp # FTP client
     libinput
+    linux-firmware
     # lxqt
+
+    mlocate
     mpv
+
+    neovim
     nil # nix language server for vscode
+
     onlyoffice-desktopeditors
+    opencomposite # VR
     openrgb-with-all-plugins
+
     prismlauncher
     python3
+
     qbittorrent
     quickshell
+
     ripgrep
+
     sof-firmware
     sof-tools
+
     tealdeer
     thunderbird
     tmux
+
     unzip
+    util-linux
+
     vlc
     vscode
+
     wget
     wine-staging
     winetricks
     wl-clipboard
+
     xclip
     xdg-utils
+    xfce.xfce4-settings
     xournalpp
+    xrizer # VR
+
     zathura
     zip
   ];
