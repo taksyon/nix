@@ -7,6 +7,7 @@
     # ./modules-yoga7-intel.nix
   ];
 
+  boot.kernelPackages = pkgs.linuxPackages_testing;
   boot.kernelModules = [
     "i2c_hid"
     "i2c_hid_acpi"
