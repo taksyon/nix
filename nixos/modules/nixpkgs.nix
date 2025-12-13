@@ -80,8 +80,14 @@
     home-manager
     htop
 
+<<<<<<< HEAD
     i2c-tools
     input-remapper
+=======
+    util-linux
+    kmod
+    # i2c-tools
+>>>>>>> 6f8f23f (update nixpkgs from vengeance)
 
     jq
 
