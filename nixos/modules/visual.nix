@@ -26,6 +26,8 @@
     package = pkgs.openrgb-with-all-plugins;
   };
 
+  services.xserver.enable = true;
+
   services.displayManager.sddm = {
     enable = true;
     # wayland.enable = true;
