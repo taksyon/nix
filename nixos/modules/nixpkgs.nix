@@ -65,6 +65,7 @@
     clang-tools
     curl
 
+    eclipses.eclipse-java
     efibootmgr
     elegant-sddm
 

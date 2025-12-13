@@ -2,11 +2,11 @@
 {
   # zathura dark mode
   xdg.configFile."zathura/zathurarc".text = ''
-    set default-bg "#1a1a1c"
-    set default-fg "#e5e5e5"
+    set default-bg "#020424"
+    set default-fg "#d4d4d4"
     set recolor "true"
     set recolor-keep "true"
-    set recolor-lightcolor "#e5e5e5"
-    set recolor-darkcolor "#1a1a1c"
+    set recolor-lightcolor "#000000"
+    set recolor-darkcolor "#c5c5c5"
   '';
 }

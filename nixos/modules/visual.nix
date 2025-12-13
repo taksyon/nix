@@ -78,6 +78,13 @@
     kdePackages.qt6ct
     wl-clipboard
     grim
+
+    # Qt
+    libsForQt5.qt5.qtimageformats
+    libsForQt5.qt5.qtmultimedia
+    libsForQt5.qt5.qtsvg
+    kdePackages.qt5compat
+
     slurp
     # haskellPackages.qt
   ];

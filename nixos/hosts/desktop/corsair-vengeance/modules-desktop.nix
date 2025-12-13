@@ -27,8 +27,8 @@
     enable = true;
     enable32Bit = true;
     extraPackages = with pkgs; [
-      #libva-vdpau-driver
-      #libvdpau-va-gl
+      libva-vdpau-driver
+      libvdpau-va-gl
     ];
   };
 
@@ -66,27 +66,9 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-  #hardware.sensor.iio.enable = true;
-
-  #### Optional battery stretch mode (Yoga has good battery but why not)
-  #services.tlp.settings.TLP_DEFAULT_MODE = "BAT";
-
-  #programs.hyprland = {
-  #plugins = [
-  #inputs.hyprgrass.packages.${pkgs.system}.default
-  # optional integration with pulse-audio
-  #inputs.hyprgrass.packages.${pkgs.system}.hyprgrass-pulse
-  #];
-  #};
-  #programs.iio-hyprland.enable = true;
-
-  #### Laptop-specific packages
   environment.systemPackages = with pkgs; [
-    #wvkbd
     # ckb-next
     openrgb
     brightnessctl
-    #iio-sensor-proxy
-    # inputs.iio-hyprland.packages.${pkgs.system}.default
   ];
 }
