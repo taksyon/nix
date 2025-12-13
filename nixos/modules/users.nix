@@ -5,10 +5,12 @@
     isNormalUser = true;
     description = "dylan";
     extraGroups = [
+      "i2c"
       "wheel"
       "networkmanager"
       "audio"
       "video"
+      "input"
     ];
     shell = pkgs.fish;
   };
