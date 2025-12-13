@@ -126,6 +126,7 @@
     vlc
     vscode
 
+    weston
     wget
     wine-staging
     winetricks
