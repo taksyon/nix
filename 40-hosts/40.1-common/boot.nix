@@ -2,8 +2,6 @@
 
 {
   boot = {
-    kernelPackages = pkgs.linuxPackages;
-
     kernelPatches = [
       {
         name = "Rust support for Linux Kernel";

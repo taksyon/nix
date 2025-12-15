@@ -9,6 +9,8 @@
     ./modules.nix
   ];
 
+  boot.kernelPackages = pkgs.linuxPackages;
+
   networking.hostName = "vengeance";
 
   services.lact.enable = true;

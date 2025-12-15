@@ -9,6 +9,8 @@
     ./modules.nix
   ];
 
+  boot.kernelPackages = pkgs.linuxPackages;
+
   users.users.dylan = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
