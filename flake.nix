@@ -46,7 +46,7 @@
 
           home-manager.extraSpecialArgs = {
             inherit host inputs;
-            inherit (inputs) caelestia-shell hyprgrass iio-hyprland;
+            inherit (inputs) caelestia-shell iio-hyprland;
           };
         };
 

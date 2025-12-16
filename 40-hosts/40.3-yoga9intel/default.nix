@@ -9,6 +9,7 @@
     ./modules.nix
   ];
 
+  # change back to testing if sound no workey
   boot.kernelPackages = pkgs.linuxPackages_testing;
   boot.kernelModules = [
     "i2c_hid"

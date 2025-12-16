@@ -6,7 +6,7 @@
     extraPackages = with pkgs; [
       # your Open GL, Vulkan and VAAPI drivers
       vpl-gpu-rt # for newer GPUs on NixOS >24.05 or unstable
-      vaapiIntel
+      intel-vaapi-driver
       intel-media-driver
     ];
   };
@@ -45,7 +45,7 @@
 
   hardware.firmware = [
     pkgs.sof-firmware
-    pkgs.firmwareLinuxNonfree
+    pkgs.linux-firmware
   ];
 
   # prevents overheating on intel CPUs
