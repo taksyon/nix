@@ -28,6 +28,6 @@
 
   services.openssh.enable = true;
   services.locate.enable = true; # enables 'locate' command
-
+  programs.firefox.enable = true;
   system.stateVersion = "25.11";
 }
