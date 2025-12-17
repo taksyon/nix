@@ -11,7 +11,7 @@
     ../../20-modules/20.2-home/20.21-common/packages.nix
     ../../20-modules/20.2-home/20.21-common/shell.nix
     ../../20-modules/20.2-home/20.22-ui/ui.nix
-    ../../20-modules/20.2-home/20.23-apps/hyprland.nix
+    # ../../20-modules/20.2-home/20.23-apps/hyprland.nix
     ../../20-modules/20.2-home/20.23-apps/caelestia.nix
     ../../20-modules/20.2-home/20.23-apps/zathura.nix
 

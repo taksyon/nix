@@ -26,7 +26,19 @@
     package = pkgs.openrgb-with-all-plugins;
   };
 
-  services.xserver.enable = true;
+  services.xserver = {
+    enable = true;
+
+    # Gnome as a backup
+    desktopManager.gnome.enable = true;
+    services.gnome.core-apps.enable = false;
+    services.gnome.core-developer-tools.enable = false;
+    services.gnome.games.enable = false;
+    environment.gnome.excludePackages = with pkgs; [
+      gnome-tour
+      gnome-user-docs
+    ];
+  };
 
   services.displayManager.sddm = {
     enable = true;

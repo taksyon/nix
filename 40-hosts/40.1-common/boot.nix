@@ -2,6 +2,9 @@
 
 {
   boot = {
+    # enables magic REISUB clutch
+    kernel.sysctl."kernel.sysrq" = 582;
+
     kernelPatches = [
       {
         name = "Rust support for Linux Kernel";
