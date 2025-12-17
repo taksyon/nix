@@ -30,16 +30,16 @@
     enable = true;
 
     # Gnome as a backup
-    desktopManager.gnome.enable = true;
-    services.gnome.core-apps.enable = false;
-    services.gnome.core-developer-tools.enable = false;
-    services.gnome.games.enable = false;
-    environment.gnome.excludePackages = with pkgs; [
-      gnome-tour
-      gnome-user-docs
-    ];
-  };
 
+  };
+  services.desktopManager.gnome.enable = true;
+  services.gnome.core-apps.enable = false;
+  services.gnome.core-developer-tools.enable = false;
+  services.gnome.games.enable = false;
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-tour
+    gnome-user-docs
+  ];
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
