@@ -1,5 +1,14 @@
 { config, pkgs, ... }:
 
+/*
+  let
+    custom-elegant-sddm = pkgs.elegant-sddm.override {
+      variants = [ "qt5" ];
+      themeConfig.General.background = "${pkgs.nixos-artwork.wallpapers.simple-dark-gray-bottom.gnomeFilePath
+      }";
+    };
+  in
+*/
 {
   programs.hyprland = {
     enable = true;
@@ -29,21 +38,24 @@
   services.xserver = {
     enable = true;
 
-    # Gnome as a backup
-
   };
-  services.desktopManager.gnome.enable = true;
-  services.gnome.core-apps.enable = false;
-  services.gnome.core-developer-tools.enable = false;
-  services.gnome.games.enable = false;
-  environment.gnome.excludePackages = with pkgs; [
-    gnome-tour
-    gnome-user-docs
-  ];
+  # Gnome as a backup
+  /*
+    services.desktopManager.gnome.enable = true;
+    services.gnome.core-apps.enable = false;
+    services.gnome.core-developer-tools.enable = false;
+    services.gnome.games.enable = false;
+    environment.gnome.excludePackages = with pkgs; [
+      gnome-tour
+      gnome-user-docs
+    ];
+  */
   services.displayManager.sddm = {
     enable = true;
+    enableHidpi = true;
     wayland.enable = true;
-    theme = "elegant-sddm";
+    theme = "Elegant";
+    extraPackages = [ pkgs.sddm-astronaut ];
   };
 
   qt = {
@@ -81,6 +93,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    sddm-astronaut
     foot
     hypridle
     hyprlock

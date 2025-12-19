@@ -6,8 +6,13 @@
     enable = true;
     enable32Bit = true;
     extraPackages = with pkgs; [
-      libva-vdpau-driver
-      libvdpau-va-gl
+      /*
+        Video Acceleration API (Intel-originated)
+        ↑↓
+        Video Decode and Presentation API for Unix (NVIDIA-originated)
+      */
+      libva-vdpau-driver # VA-API → VDPAU translation
+      libvdpau-va-gl # VDPAU → VA-API translation via OpenGL
     ];
   };
   hardware.bluetooth.enable = true;

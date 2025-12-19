@@ -32,7 +32,7 @@
 
   powerManagement.enable = true;
   powerManagement.powertop.enable = true;
-  programs.firefox.enable = true;
+  services.power-profiles-daemon.enable = false; # conflicts with TLP
 
   # lid behavior
   services.logind = {

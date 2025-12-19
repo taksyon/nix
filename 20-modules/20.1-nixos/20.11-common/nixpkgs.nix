@@ -23,6 +23,7 @@
 
   programs.steam = {
     enable = true;
+    # VR =====
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     package = pkgs.steam.override {
@@ -33,16 +34,18 @@
         export PRESSURE_VESSEL_IMPORT_OPENXR_1_RUNTIMES=1
       '';
     };
+    # ========
   };
 
   # VR
   programs.alvr.enable = true;
   programs.alvr.openFirewall = true;
 
-  # Virtualisation
+  # for VM's
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
+  # SYSTEM FONTS
   fonts.packages = with pkgs; [
     nerd-fonts.droid-sans-mono
     nerd-fonts.fira-code
@@ -56,6 +59,7 @@
 
   ];
 
+  # SYSTEM PACKAGES
   environment.systemPackages = with pkgs; [
     alsa-utils
     alsa-ucm-conf
