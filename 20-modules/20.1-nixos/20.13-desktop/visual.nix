@@ -54,7 +54,7 @@
     enable = true;
     enableHidpi = true;
     wayland.enable = true;
-    theme = "Elegant";
+    theme = "sddm-astronaut-theme";
     extraPackages = [ pkgs.sddm-astronaut ];
   };
 
