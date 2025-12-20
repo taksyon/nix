@@ -54,8 +54,11 @@
     enable = true;
     enableHidpi = true;
     wayland.enable = true;
+    # package = libsForQt5.sddm;
     theme = "sddm-astronaut-theme";
-    extraPackages = [ pkgs.sddm-astronaut ];
+    extraPackages = [
+      pkgs.sddm-astronaut
+    ];
   };
 
   qt = {
@@ -102,9 +105,11 @@
     grim
 
     # Qt
+    kdePackages.qtbase
     libsForQt5.qt5.qtimageformats
     libsForQt5.qt5.qtmultimedia
     libsForQt5.qt5.qtsvg
+    libsForQt5.qt5.qtbase
     kdePackages.qt5compat
 
     slurp

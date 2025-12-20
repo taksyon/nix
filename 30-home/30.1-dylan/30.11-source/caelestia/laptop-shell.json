@@ -42,20 +42,21 @@
       "warnLevels": [
         {
           "level": 20,
-          "title": "BATTERY LOW",
-          "message": "20%",
+          "title": "Low battery",
+          "message": "You might want to plug in a charger",
           "icon": "battery_android_frame_2"
         },
         {
           "level": 10,
-          "title": "BATTERY VERY LOW",
-          "message": "10%",
+          "title": "Did you see the previous message?",
+          "message": "You should probably plug in a charger <b>now</b>",
           "icon": "battery_android_frame_1"
         },
         {
           "level": 5,
-          "title": "BATTERY CRITICAL",
-          "message": "5%",
+          "title": "Critical battery level",
+          "message": "PLUG THE CHARGER RIGHT NOW!!",
+          "icon": "battery_android_alert",
           "critical": true
         }
       ],
@@ -66,11 +67,16 @@
       "inhibitWhenAudio": true,
       "timeouts": [
         {
-          "timeout": 600,
+          "timeout": 180,
           "idleAction": "lock"
         },
         {
-          "timeout": 1200,
+          "timeout": 300,
+          "idleAction": "brightnessctl set 0",
+          "returnAction": "brightnessctl set 80%"
+        },
+        {
+          "timeout": 600,
           "idleAction": ["systemctl", "suspend-then-hibernate"]
         }
       ]
@@ -82,8 +88,8 @@
     },
     "enabled": true,
     "visualiser": {
-      "blur": true,
-      "enabled": true,
+      "blur": false,
+      "enabled": false,
       "autoHide": true,
       "rounding": 1,
       "spacing": 1
@@ -91,7 +97,7 @@
   },
   "bar": {
     "clock": {
-      "showIcon": false
+      "showIcon": true
     },
     "dragThreshold": 20,
     "entries": [
@@ -139,13 +145,13 @@
       "tray": true
     },
     "scrollActions": {
-      "brightness": false,
+      "brightness": true,
       "workspaces": true,
-      "volume": false
+      "volume": true
     },
     "showOnHover": true,
     "status": {
-      "showAudio": true,
+      "showAudio": false,
       "showBattery": true,
       "showBluetooth": true,
       "showKbLayout": false,
@@ -154,10 +160,10 @@
       "showLockStatus": true
     },
     "tray": {
-      "background": true,
-      "compact": true,
+      "background": false,
+      "compact": false,
       "iconSubs": [],
-      "recolour": true
+      "recolour": false
     },
     "workspaces": {
       "activeIndicator": true,
@@ -312,14 +318,14 @@
       "variants": false,
       "wallpapers": false
     },
-    "showOnHover": true,
+    "showOnHover": false,
     "hiddenApps": []
   },
   "lock": {
     "recolourLogo": false
   },
   "notifs": {
-    "actionOnClick": true,
+    "actionOnClick": false,
     "clearThreshold": 0.3,
     "defaultExpireTimeout": 5000,
     "expandThreshold": 20,

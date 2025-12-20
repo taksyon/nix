@@ -1,6 +1,7 @@
 {
   description = "top level nix flake";
 
+  # inputs is an attribute set
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
