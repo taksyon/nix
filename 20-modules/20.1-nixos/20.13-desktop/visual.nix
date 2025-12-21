@@ -22,7 +22,7 @@
     plugins = with pkgs.xfce; [
       thunar-archive-plugin
       thunar-volman
-      thunar-vcs-plugin
+      thunar-vcs-plugin # adds git to thunar
       thunar-media-tags-plugin
     ];
   };

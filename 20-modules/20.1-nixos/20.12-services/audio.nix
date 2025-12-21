@@ -15,4 +15,9 @@
     pulse.enable = true;
     # jack.enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    # TODO: move this somewhere more user-centric
+    strawberry # Music collection organizer
+  ];
 }
