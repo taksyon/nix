@@ -23,6 +23,7 @@
     wine
     winetricks
     cabextract
+    inkscape # vector gfx editor
 
     # Utilities
     zip
