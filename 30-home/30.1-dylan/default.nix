@@ -28,9 +28,11 @@
 
   home.stateVersion = "25.11";
 
+  # GTK is bright white for thunar, but VS Code file picker still uses old GTK theme?
+
   # custom file sourcing
-  xdg.configFile."gtk-3.0/gtk.css".source = ./30.11-source/gtk/gtk-3.0/gtk.css;
-  xdg.configFile."gtk-4.0/gtk.css".source = ./30.11-source/gtk/gtk-4.0/gtk.css;
-  xdg.configFile."btop/btop.conf".source = ./30.11-source/btop/btop.conf;
+  # xdg.configFile."gtk-3.0/gtk.css".source = ./30.11-source/gtk/gtk-3.0/gtk.css;
+  # xdg.configFile."gtk-4.0/gtk.css".source = ./30.11-source/gtk/gtk-4.0/gtk.css;
+  # xdg.configFile."btop/btop.conf".source = ./30.11-source/btop/btop.conf;
 
 }

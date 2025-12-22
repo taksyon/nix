@@ -26,13 +26,15 @@
     enable = true;
 
     interactiveShellInit = ''
-      set -g fish_greeting ""
-      set -Ux EDITOR nvim
-      set -g theme_nerd_fonts yes
+      # syntax: shell
+        set -g fish_greeting ""
+        set -Ux EDITOR nvim
+        set -g theme_nerd_fonts yes
     '';
 
     shellAliases = {
-
+      #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      # syntax: sh
       javadocs = "javadoc -d ./docs -sourcepath . *.java";
       fetch = "fastfetch";
       binds = "more ~/.config/keybindings.md";
@@ -63,6 +65,7 @@
       la = "ls -la";
       dots = "nvim ~/.dotfiles/";
       windows = "sudo strings /sys/firmware/acpi/tables/MSDM";
+      #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     };
   };
 }
