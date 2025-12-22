@@ -61,31 +61,26 @@ in
 
       bar = {
         clock.showIcon = false;
-        status = {
-          showAudio = true;
-          showBattery = true;
-        };
+        # status = {
+        # showAudio = true;
+        # showBattery = false;
+        # };
       };
-
-      general.idle.timeouts = [
-        {
-          timeout = 800;
-          idleAction = "lock";
-        }
-        {
-          timeout = 1200;
-          idleAction = "dpms off";
-          returnAction = "dpms on";
-        }
-        {
-          timeout = 1600;
-          idleAction = [
-            "systemctl"
-            "suspend-then-hibernate"
-          ];
-        }
-      ];
-
+      /*
+        general.idle.timeouts = [
+          {
+            timeout = 800;
+            idleAction = "lock";
+          }
+          {
+            timeout = 1600;
+            idleAction = [
+              "systemctl"
+              "suspend-then-hibernate"
+            ];
+          }
+        ];
+      */
       paths.wallpaperDir = "~/Pictures/Wallpapers";
     };
 
@@ -96,7 +91,7 @@ in
         enableDiscord = true;
         enableHypr = true;
         enableTerm = true;
-        enableGtk = true;
+        enableGtk = false;
         enableQt = true;
       };
     };
