@@ -30,7 +30,7 @@
 
     # Fine-grained power management. Turns off GPU when not in use.
     # Experimental and only works on modern Nvidia GPUs (Turing or newer).
-    powerManagement.finegrained = true;
+    powerManagement.finegrained = false;
 
     # Use the NVidia open source kernel module (not to be confused with the
     # independent third-party "nouveau" open source driver).
@@ -63,10 +63,7 @@
   environment.systemPackages = with pkgs; [
     ckb-next
     openrgb
-<<<<<<< HEAD
-=======
     brightnessctl
     inputs.nix-citizen.packages.${system}.rsi-launcher
->>>>>>> 584d459 (vengeance: caelestia changes)
   ];
 }
