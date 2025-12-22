@@ -21,28 +21,28 @@
   # };
 
   boot.kernelModules = [ "i2c-dev" ];
+  /*
+    # to fix sound problem on yoga 9i
+    systemd.services.turn-on-speakers = {
+      description = "Turn on speakers using i2c configuration";
+      after = [
+        "suspend.target"
+        "hibernate.target"
+        "hybrid-sleep.target"
+        "suspend-then-hibernate.target"
+      ];
 
-  # to fix sound problem on yoga 9i
-  systemd.services.turn-on-speakers = {
-    description = "Turn on speakers using i2c configuration";
-    after = [
-      "suspend.target"
-      "hibernate.target"
-      "hybrid-sleep.target"
-      "suspend-then-hibernate.target"
-    ];
-
-    serviceConfig = {
-      User = "root";
-      Type = "oneshot";
-      ExecStart = "${pkgs.bash}/bin/bash -c \"${./2pa-byps.sh} | ${pkgs.util-linux}/bin/logger\"";
+      serviceConfig = {
+        User = "root";
+        Type = "oneshot";
+        ExecStart = "${pkgs.bash}/bin/bash -c \"${./2pa-byps.sh} | ${pkgs.util-linux}/bin/logger\"";
+      };
+      wantedBy = [
+        "multi-user.target"
+        "sleep.target"
+      ];
     };
-    wantedBy = [
-      "multi-user.target"
-      "sleep.target"
-    ];
-  };
-
+  */
   hardware.firmware = [
     pkgs.sof-firmware
     pkgs.linux-firmware
