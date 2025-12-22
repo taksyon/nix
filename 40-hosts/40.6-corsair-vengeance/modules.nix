@@ -63,5 +63,10 @@
   environment.systemPackages = with pkgs; [
     ckb-next
     openrgb
+<<<<<<< HEAD
+=======
+    brightnessctl
+    inputs.nix-citizen.packages.${system}.rsi-launcher
+>>>>>>> 584d459 (vengeance: caelestia changes)
   ];
 }
