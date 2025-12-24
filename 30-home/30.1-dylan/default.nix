@@ -1,5 +1,21 @@
-{ config, pkgs, ... }@inputs:
+{
+  config,
+  pkgs,
+  lib,
+  host,
+  ...
+}@inputs:
 
+let
+  hostModules = {
+    yoga7amd = ./30.13_Hosts/yoga7amd.nix;
+    yoga9intel = ./30.13_Hosts/yoga9intel.nix;
+    asusG16 = ./30.13_Hosts/asusG16.nix;
+    vengeance = ./30.13_Hosts/vengeance.nix;
+  };
+
+  hostModule = lib.attrByPath [ host ] null hostModules;
+in
 {
   home.username = "dylan";
   home.homeDirectory = "/home/dylan";
@@ -15,7 +31,8 @@
     ../../20-modules/20.2-home/20.23-apps/caelestia.nix
     ../../20-modules/20.2-home/20.23-apps/zathura.nix
 
-  ];
+  ] # ++ lib.optional (hostModule != null) hostModule
+  ;
 
   programs.home-manager.enable = true;
 

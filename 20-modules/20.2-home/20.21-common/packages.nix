@@ -3,17 +3,14 @@
 {
   home.packages = with pkgs; [
 
-    # Communication
     betterdiscordctl
     discord
     signal-desktop
     telegram-desktop
 
-    # Media
     vlc
     mpv
 
-    # Gaming
     # steam
     lutris
     heroic
@@ -25,7 +22,6 @@
     cabextract
     inkscape # vector gfx editor
 
-    # Utilities
     zip
     unzip
     p7zip
@@ -34,6 +30,7 @@
     ripgrep
     fd
     fzf
+    hyprls
     jq
     direnv # for vscode extension
     wget
@@ -42,7 +39,6 @@
     tmux
     tealdeer # Rust impl of tldr package
 
-    # Build tools
     gcc
     gdb
     gnumake
@@ -74,12 +70,10 @@
     gopls
     shellcheck
 
-    # Version Control
     git
     git-crypt
     gh
 
-    # Fonts
     nerd-fonts.fira-code
     nerd-fonts.hack
     nerd-fonts.iosevka
@@ -93,7 +87,6 @@
     prismlauncher
     yazi
     pulseaudio
-    # pipewire
     pavucontrol
   ];
 

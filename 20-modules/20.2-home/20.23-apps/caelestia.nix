@@ -6,7 +6,7 @@
   ...
 }:
 let
-  src = "${inputs.self}/30-home/30.1-dylan/30.11-source";
+  src = "${inputs.self}/30-home/30.1-dylan/30.12_Source";
 
   isYoga7Amd = host == "yoga7amd";
   isYoga9Intel = host == "yoga9intel";
