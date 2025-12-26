@@ -5,6 +5,8 @@
     ../../20-modules/20.1-nixos/20.11-common/users.nix
     ../../20-modules/20.1-nixos/20.11-common/nixpkgs.nix
     ../../20-modules/20.1-nixos/20.12-services/networking.nix
+    ../../20-modules/20.1-nixos/20.12-services/dashboard.nix
+    ../../20-modules/20.1-nixos/20.12-services/power.nix
     ../../20-modules/20.1-nixos/20.12-services/audio.nix
     ../../20-modules/20.1-nixos/20.13-desktop/visual.nix
   ];
