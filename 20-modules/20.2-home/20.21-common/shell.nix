@@ -5,20 +5,22 @@
   programs.foot = {
     enable = true;
 
-    settings = {
-      main = {
-        font = "Hack Nerd Font Mono:size=12";
-        dpi-aware = "yes";
+    /*
+      settings = {
+        main = {
+          font = "Hack Nerd Font Mono:size=12";
+          dpi-aware = "yes";
+        };
+        colors = {
+          alpha = 0.8;
+          background = "000000";
+        };
+        scrollback = {
+          lines = 10000;
+          multiplier = 3.0;
+        };
       };
-      colors = {
-        alpha = 0.8;
-        background = "000000";
-      };
-      scrollback = {
-        lines = 10000;
-        multiplier = 3.0;
-      };
-    };
+    */
   };
 
   # fish

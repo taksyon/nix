@@ -51,7 +51,7 @@ in
   # xdg.configFile."btop/btop.conf".source = ./30.11-source/btop/btop.conf;
 
   #### foot.ini for reference only. do not source. --> /nix/20-modules/20.21-common/shell.nix
-  #### /*xdg.configFile."foot/foot.ini".source = ./30.12_Source/foot/foot.ini;*/
+  xdg.configFile."foot/foot.ini".source = ./30.12_Source/foot/foot.ini;
   xdg.configFile."caelestia/shell.json".source = ./30.12_Source/caelestia/shell.json;
   xdg.configFile."caelestia/cli.json".source = ./30.12_Source/caelestia/cli.json;
 
