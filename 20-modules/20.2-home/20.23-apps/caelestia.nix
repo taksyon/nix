@@ -22,7 +22,7 @@ let
 
   hyprUser =
     if isYoga9Intel then
-      "${src}/caelestia/yoga9intel-user.conf"
+      "${src}/caelestia/yoga9intel-user.hl"
     else if isVengeance then
       "${src}/caelestia/vengeance-user.conf"
     else
