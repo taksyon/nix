@@ -21,7 +21,9 @@
   hardware.sensor.iio.enable = true;
 
   networking.hostName = "yoga7amd";
-  services.tlp.enable = true;
+  services.tlp.settings = {
+    STOP_CHARGE_THRESH_BAT0 = 1;
+  };
   services.lact.enable = true;
 
   powerManagement.powertop.enable = true;

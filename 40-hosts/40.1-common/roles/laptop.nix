@@ -53,8 +53,8 @@
     CPU_SCALING_GOVERNOR_ON_AC = "performance";
     WIFI_PWR_ON_BAT = "on";
     WIFI_PWR_ON_AC = "off";
-    START_CHARGE_THRESH_BAT0 = 50;
-    STOP_CHARGE_THRESH_BAT0 = 80;
+    # START_CHARGE_THRESH_BAT0 = 0;
+    # STOP_CHARGE_THRESH_BAT0 = 80; # vendor specific. see sudo tlp-stat -b
   };
 
   # generic laptop tools
