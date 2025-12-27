@@ -14,19 +14,23 @@ let
 
   hyprVars =
     if isYoga9Intel then
-      "${src}/caelestia/yoga9intel-vars.conf"
+      "${src}/caelestia/yoga9intel-vars.hl"
+    else if isYoga7Amd then
+      "${src}/caelestia/yoga7amd-vars.hl"
     else if isVengeance then
-      "${src}/caelestia/vengeance-vars.conf"
+      "${src}/caelestia/vengeance-vars.hl"
     else
-      "${src}/caelestia/hypr-vars.conf";
+      "${src}/caelestia/hypr-vars.hl";
 
   hyprUser =
     if isYoga9Intel then
       "${src}/caelestia/yoga9intel-user.hl"
+    else if isYoga7Amd then
+      "${src}/caelestia/yoga7amd-user.hl"
     else if isVengeance then
-      "${src}/caelestia/vengeance-user.conf"
+      "${src}/caelestia/vengeance-user.hl"
     else
-      "${src}/caelestia/hypr-user.conf";
+      "${src}/caelestia/hypr-user.hl";
 in
 {
   programs.caelestia = {
