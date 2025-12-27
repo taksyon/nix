@@ -3,16 +3,27 @@
 
   # inputs is an attribute set
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-unstable";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+    };
 
-    iio-hyprland.url = "github:JeanSchoeller/iio-hyprland";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
+
+    iio-hyprland = {
+      url = "github:JeanSchoeller/iio-hyprland";
+    };
 
     hyprgrass = {
       url = "github:horriblename/hyprgrass";
@@ -25,14 +36,13 @@
     };
 
     # For Star Citizen
-    nix-citizen.url = "github:LovingMelody/nix-citizen";
     nix-gaming.url = "github:fufexan/nix-gaming";
-    nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
+    nix-citizen = {
+      url = "github:LovingMelody/nix-citizen";
+      inputs.nix-gaming.follows = "nix-gaming";
+    };
   };
 
-  /**
-    
-   */
   outputs =
     {
       self,
@@ -55,7 +65,7 @@
 
           home-manager.extraSpecialArgs = {
             inherit host inputs;
-            inherit (inputs) caelestia-shell iio-hyprland;
+            inherit (inputs) caelestia-shell iio-hyprland hyprgrass;
           };
         };
 
