@@ -31,8 +31,8 @@ in
     ../../20-modules/20.2-home/20.23-apps/caelestia.nix
     ../../20-modules/20.2-home/20.23-apps/zathura.nix
 
-  ] # ++ lib.optional (hostModule != null) hostModule
-  ;
+  ]
+  ++ lib.optional (hostModule != null) hostModule;
 
   programs.home-manager.enable = true;
 
