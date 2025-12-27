@@ -21,4 +21,15 @@
 
   networking.hostName = "yoga9intel";
   services.lact.enable = true;
+
+  # force refresh rate back to 120hz after resume from sleep
+  systemd.services.force-cpu-governor-resume = {
+    description = "Force CPU governor after resume";
+    wantedBy = [ "post-resume.target" ];
+
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.bash}/bin/bash -c 'for g in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo schedutil > $g; done'";
+    };
+  };
 }
