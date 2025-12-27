@@ -124,6 +124,7 @@
     opencomposite # VR
     openrgb-with-all-plugins
 
+    power-profiles-daemon
     prismlauncher
     python3
 

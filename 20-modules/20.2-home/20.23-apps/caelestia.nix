@@ -37,7 +37,7 @@ in
     enable = true;
 
     systemd = {
-      enable = false;
+      enable = true;
       target = "graphical-session.target";
       environment = [ ];
     };
@@ -81,7 +81,7 @@ in
         enableDiscord = true;
         enableHypr = true;
         enableTerm = true;
-        enableGtk = false;
+        enableGtk = true;
         enableQt = true;
       };
     };

@@ -21,6 +21,9 @@
 
   networking.hostName = "yoga9intel";
   services.lact.enable = true;
+  services.tlp.settings = {
+    STOP_CHARGE_THRESH_BAT0 = 1;
+  };
 
   # force refresh rate back to 120hz after resume from sleep
   systemd.services.force-cpu-governor-resume = {
