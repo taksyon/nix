@@ -70,6 +70,10 @@
           "idleAction": "lock"
         },
         {
+          "timeout": 850,
+          "idleAction": "brightnessctl set 1"
+        },
+        {
           "timeout": 1200,
           "idleAction": ["systemctl", "suspend-then-hibernate"]
         }
