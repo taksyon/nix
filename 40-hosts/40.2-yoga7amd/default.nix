@@ -1,4 +1,4 @@
-{ ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -16,7 +16,7 @@
     extraGroups = [ "wheel" ];
   };
 
-  home-manager.users.dylan = import ../../30-home/30-10-dylan/default.nix;
+  # home-manager.users.dylan = import ../../30-home/30.1-dylan/default.nix;
 
   hardware.sensor.iio.enable = true;
 
