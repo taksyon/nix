@@ -51,4 +51,10 @@
   # prevents overheating on intel CPUs
   services.thermald.enable = true;
   hardware.cpu.intel.updateMicrocode = true;
+
+  programs.iio-hyprland.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    squeekboard
+  ];
 }

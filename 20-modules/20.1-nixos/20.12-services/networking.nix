@@ -10,4 +10,6 @@
     allowedTCPPorts = [ 22 ];
     allowedUDPPorts = [ ];
   };
+
+  services.tailscale.enable = true; # VPN
 }

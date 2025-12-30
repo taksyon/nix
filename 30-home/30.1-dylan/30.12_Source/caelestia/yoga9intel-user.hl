@@ -12,6 +12,9 @@ bind = Super, mouse_down, workspace, +1
 bind = Super, mouse_up, workspace, -1
 bind = Super, B, exec, app2unit -- firefox
 bindr = Ctrl+Super+Alt, R, exec, pkill quickshell && sleep 1s && caelestia shell -d
+bindl = , switch:on:Lenovo\ Yoga\ Tablet\ Mode\ Control\ switch, exec, ~/.config/hypr/scripts/osk.sh on
+
+bindl = , switch:off:Lenovo\ Yoga\ Tablet\ Mode\ Control\ switch, exec, ~/.config/hypr/scripts/osk.sh off
 
 gesture = $gestureFingers, pinch, fullscreen
 gesture = $gestureFingersMore, down, unset
@@ -27,7 +30,7 @@ monitor = eDP-1,2880x1800@120, auto, 1.6
 exec-once = hyprctl dispatch exec caelestia wallpaper --random ~/Pictures/Wallpapers
 exec-once = hyprctl dispatch exec \[ workspace 1 silent \] app2unit -- code
 exec-once = hyprctl dispatch exec \[ workspace 2 silent \] app2unit -- firefox 
-exec-once = hyprctl dispatch exec \[ workspace 3 silent \] app2unit -- foot btop && hyprctl dispatch movetoworkspacesilent \[ fullscreen \] special,foot 
+exec-once = hyprctl dispatch exec \[ workspace 3 silent \] app2unit -- protonvpn-app 
 
 plugin {
  touch_gestures {
