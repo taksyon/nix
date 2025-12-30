@@ -11,6 +11,7 @@
     enable = true;
     plugins = [
       pkgs.hyprlandPlugins.hyprgrass
+      pkgs.hyprlandPlugins.hyprexpo
       # inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprgrass
     ];
     # temporary
@@ -50,6 +51,18 @@
       exec = mkdir -p $cConf && touch -a $cConf/hypr-user.conf
       source = $cConf/hypr-user.conf
     '';
+    /*
+        # hyprland settings
+        settings = {
+          bindl = ", switch:on:Lenovo\ Yoga\ Tablet\ Mode\ Control\ switch, exec";
+
+        };
+    */
+  };
+
+  xdg.configFile."hypr/scripts/osk.sh" = {
+    source = ../30.12_Source/scripts/osk.sh;
+    executable = true;
   };
 
 }

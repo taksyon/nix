@@ -55,4 +55,8 @@ in
   xdg.configFile."caelestia/shell.json".source = ./30.12_Source/caelestia/shell.json;
   xdg.configFile."caelestia/cli.json".source = ./30.12_Source/caelestia/cli.json;
 
+  home.packages = with pkgs; [
+    protonvpn-gui
+  ];
+
 }

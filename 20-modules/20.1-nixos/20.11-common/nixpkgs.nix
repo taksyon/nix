@@ -16,6 +16,10 @@
     # download-buffer-size = "512MiB";
   };
 
+  programs.dconf = {
+    enable = true;
+  };
+
   programs.git = {
     enable = true;
     lfs.enable = true;
@@ -74,12 +78,15 @@
     clang-tools
     curl
 
+    dmidecode # https://www.nongnu.org/dmidecode/
+
     eclipses.eclipse-java
     efibootmgr
     elegant-sddm
 
     fastfetch
     fd
+    file
     font-manager
 
     git
