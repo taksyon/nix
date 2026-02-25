@@ -55,6 +55,9 @@
       # ---- PREFERENCES ----
       # Check about:config for options.
       Preferences = {
+        # set dark theme for firefox
+        "browser.theme.content-theme" = 0;
+        "browser.theme.toolbar-theme" = 0;
         /*
           "browser.contentblocking.category" = {
                 Value = "strict";
@@ -66,6 +69,7 @@
         # "browser.topsites.contile.enabled" = false;
         # "browser.formfill.enable" = false;
         # "browser.search.suggest.enabled" = false;
+        #
         "browser.search.suggest.enabled.private" = false;
         # "browser.urlbar.suggest.searches" = false;
         "browser.urlbar.showSearchSuggestionsFirst" = false;

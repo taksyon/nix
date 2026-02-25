@@ -19,6 +19,7 @@
   programs.dconf = {
     enable = true;
   };
+  #
 
   programs.git = {
     enable = true;
@@ -71,6 +72,7 @@
 
     bat
     bat-extras.core
+    bibletime
     blueman
     brightnessctl
     btop
@@ -89,6 +91,7 @@
     file
     font-manager
 
+    gdu # CLI disk visualization tool
     git
     gparted
     gnome.gvfs
