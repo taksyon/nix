@@ -34,10 +34,12 @@
   powerManagement.powertop.enable = true;
   services.power-profiles-daemon.enable = false; # conflicts with TLP
 
-  # lid behavior
+  # logind
   services.logind = {
     settings = {
       Login = {
+        HandlePowerKey = "ignore";
+        HandlePowerKeyLongPress = "poweroff";
         HandleLidSwitch = "suspend";
         HandleLidSwitchDocked = "ignore";
       };

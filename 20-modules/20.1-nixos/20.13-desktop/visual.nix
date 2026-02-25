@@ -56,11 +56,12 @@
     enable = true;
     enableHidpi = true;
     wayland.enable = true;
-    # package = libsForQt5.sddm;
-    theme = "sddm-astronaut-theme";
-    extraPackages = [
-      pkgs.sddm-astronaut
-    ];
+    theme = "${
+      pkgs.where-is-my-sddm-theme.override { variants = [ "qt5" ]; }
+    }/share/sddm/themes/where_is_my_sddm_theme_qt5";
+    # extraPackages = [
+    # pkgs.sddm-astronaut
+    # ];
   };
 
   qt = {
