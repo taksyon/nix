@@ -105,6 +105,7 @@
     git
     gparted
     gnome.gvfs
+    image-roll
 
     home-manager
     htop

@@ -193,6 +193,7 @@
       "inhibitWhenAudio": true,
       "timeouts": [
         {
+<<<<<<< HEAD
           "timeout": 10,
           "idleAction": "echo"
         },
@@ -203,6 +204,11 @@
         {
           "timeout": 3600,
           "idleAction": ["systemctl", "suspend-then-hibernate"]
+=======
+          "timeout": 300,
+          "idleAction": "brightnessctl set 0",
+          "returnAction": "brightnessctl set 80%"
+>>>>>>> 12ce3fa (buncha changes)
         }
       ]
     }
@@ -279,7 +285,7 @@
       "showAudio": true,
       "showBattery": true,
       "showBluetooth": true,
-      "showKbLayout": true,
+      "showKbLayout": false,
       "showMicrophone": false,
       "showNetwork": true,
       "showLockStatus": true

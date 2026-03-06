@@ -71,6 +71,28 @@ in
         # };
       };
 
+<<<<<<< HEAD
+=======
+      general.idle.timeouts = [
+        {
+          timeout = 80000;
+          idleAction = "lock";
+        }
+        {
+          timeout = 1200;
+          idleAction = "brightnessctl set 1";
+          returnAction = "brightnessctl set 80%";
+        }
+        {
+          timeout = 1600;
+          idleAction = [
+            "systemctl"
+            "suspend-then-hibernate"
+          ];
+        }
+      ];
+
+>>>>>>> 12ce3fa (buncha changes)
       paths.wallpaperDir = "~/Pictures/Wallpapers";
     };
 
