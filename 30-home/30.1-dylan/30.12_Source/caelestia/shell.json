@@ -66,16 +66,9 @@
       "inhibitWhenAudio": true,
       "timeouts": [
         {
-          "timeout": 600,
-          "idleAction": "lock"
-        },
-        {
-          "timeout": 850,
-          "idleAction": "brightnessctl set 1"
-        },
-        {
-          "timeout": 1200,
-          "idleAction": ["systemctl", "suspend-then-hibernate"]
+          "timeout": 300,
+          "idleAction": "brightnessctl set 0",
+          "returnAction": "brightnessctl set 80%"
         }
       ]
     }
@@ -152,7 +145,7 @@
       "showAudio": true,
       "showBattery": true,
       "showBluetooth": true,
-      "showKbLayout": true,
+      "showKbLayout": false,
       "showMicrophone": false,
       "showNetwork": true,
       "showLockStatus": true

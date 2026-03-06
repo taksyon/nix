@@ -73,14 +73,14 @@ in
 
       general.idle.timeouts = [
         {
-          timeout = 800;
+          timeout = 80000;
           idleAction = "lock";
         }
-        # {
-        # timeout = 1200;
-        # idleAction = "dpms off";
-        # returnAction = "dpms on";
-        # }
+        {
+          timeout = 1200;
+          idleAction = "brightnessctl set 1";
+          returnAction = "brightnessctl set 80%";
+        }
         {
           timeout = 1600;
           idleAction = [
