@@ -40,6 +40,7 @@
   # VR
   programs.alvr.enable = true;
   programs.alvr.openFirewall = true;
+  programs.obs-studio.enable = true;
 
   # for VM's
   virtualisation.virtualbox.host.enable = true;
@@ -73,6 +74,7 @@
 
     clang-tools
     curl
+    snapshot
 
     eclipses.eclipse-java
     efibootmgr
@@ -149,5 +151,6 @@
 
     zathura
     zip
+    zstd
   ];
 }

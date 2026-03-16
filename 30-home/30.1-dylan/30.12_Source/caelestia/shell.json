@@ -87,7 +87,7 @@
     "enabled": true,
     "visualiser": {
       "blur": true,
-      "enabled": true,
+      "enabled": false,
       "autoHide": true,
       "rounding": 1,
       "spacing": 1
@@ -145,7 +145,7 @@
     "scrollActions": {
       "brightness": false,
       "workspaces": true,
-      "volume": false
+      "volume": true
     },
     "showOnHover": true,
     "status": {

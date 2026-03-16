@@ -19,6 +19,7 @@
     mangohud
     wine
     winetricks
+    protonup-qt
     cabextract
     inkscape # vector gfx editor
 
