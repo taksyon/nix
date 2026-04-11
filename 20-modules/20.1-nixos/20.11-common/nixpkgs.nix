@@ -101,6 +101,7 @@
     file
     font-manager
 
+    #
     gdu # CLI disk visualization tool
     git
     gparted
