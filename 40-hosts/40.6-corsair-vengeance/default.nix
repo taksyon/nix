@@ -27,6 +27,7 @@
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   boot.kernelParams = [
     "zswap.enabled=1"
@@ -51,6 +52,8 @@
   */
 
 >>>>>>> d9e700f (removed hosts that I gave away)
+=======
+>>>>>>> 2b00929 (many changes to shell.json for desktop)
   networking.hostName = "vengeance";
 
   services.lact.enable = true; # https://mynixos.com/nixpkgs/options/services.lact
@@ -68,6 +71,7 @@
 
     };
   */
+<<<<<<< HEAD
   users.users.dylan = {
     packages = with pkgs; [
       # tricks override to fix audio
@@ -83,4 +87,7 @@
     ];
   };
 >>>>>>> d9e700f (removed hosts that I gave away)
+=======
+
+>>>>>>> 2b00929 (many changes to shell.json for desktop)
 }
