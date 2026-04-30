@@ -67,7 +67,7 @@
       "inhibitWhenAudio": true,
       "timeouts": [
         {
-          "timeout": 600,
+          "timeout": 10,
           "idleAction": "lock"
         },
         {

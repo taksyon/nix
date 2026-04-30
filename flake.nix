@@ -30,9 +30,6 @@
     nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
   };
 
-  /**
-    
-   */
   outputs =
     {
       self,
@@ -40,6 +37,7 @@
       home-manager,
       ...
     }@inputs:
+    # idk just wanna update
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
@@ -78,9 +76,7 @@
     in
     {
       nixosConfigurations = {
-        yoga7amd = mkHost "yoga7amd" ./40-hosts/40.2-yoga7amd/default.nix;
         yoga9intel = mkHost "yoga9intel" ./40-hosts/40.3-yoga9intel/default.nix;
-        asusG16 = mkHost "asusG16" ./40-hosts/40.5-asusG16/default.nix;
         vengeance = mkHost "vengeance" ./40-hosts/40.6-corsair-vengeance/default.nix;
       };
     };

@@ -62,19 +62,19 @@
       "criticalLevel": 3
     },
     "idle": {
-      "lockBeforeSleep": true,
+      "lockBeforeSleep": false,
       "inhibitWhenAudio": true,
       "timeouts": [
         {
-          "timeout": 600,
-          "idleAction": "lock"
+          "timeout": 10,
+          "idleAction": "echo"
         },
         {
           "timeout": 850,
-          "idleAction": "brightnessctl set 1"
+          "idleAction": "echo"
         },
         {
-          "timeout": 1200,
+          "timeout": 3600,
           "idleAction": ["systemctl", "suspend-then-hibernate"]
         }
       ]
@@ -325,9 +325,9 @@
   "notifs": {
     "actionOnClick": true,
     "clearThreshold": 0.3,
-    "defaultExpireTimeout": 5000,
+    "defaultExpireTimeout": 90,
     "expandThreshold": 20,
-    "expire": false
+    "expire": true
   },
   "osd": {
     "enabled": true,
@@ -352,7 +352,7 @@
       }
     ],
     "weatherLocation": "",
-    "useFahrenheit": false,
+    "useFahrenheit": true,
     "useTwelveHourClock": false,
     "smartScheme": true,
     "visualiserBars": 45

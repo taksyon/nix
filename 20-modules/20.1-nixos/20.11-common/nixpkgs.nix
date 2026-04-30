@@ -21,6 +21,11 @@
     lfs.enable = true;
   };
 
+  programs.java = {
+    enable = true;
+    package = pkgs.jdk25;
+  };
+
   programs.steam = {
     enable = true;
     # VR =====

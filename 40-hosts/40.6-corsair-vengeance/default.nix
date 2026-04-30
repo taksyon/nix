@@ -4,16 +4,6 @@
   inputs,
   ...
 }:
-/*
-  let
-    nix-gaming = import (
-      builtins.fetchTarball {
-        url = "https://github.com/fufexan/nix-gaming/archive/master.tar.gz";
-        # sha256 = "3c85dac50d8494bba399e94c3ac41a5015fcc13ec4831782b9440dd14cfde9c5";
-      }
-    );
-  in
-*/
 {
   imports = [
     ../40.1-common/boot.nix
@@ -36,28 +26,6 @@
     "fs.file-max" = 524288;
   };
 
-  boot.kernelParams = [
-    "zswap.enabled=1"
-    "zswap.compressor=zstd"
-    "zswap.zpool=z3fold"
-    "zswap.max_pool_percent=20"
-  ];
-
-  # See RAM, ZRAM & Swap
-  swapDevices = [
-    {
-      device = "/var/lib/swapfile";
-      size = 64 * 1024; # 64 GB Swap
-    }
-  ];
-  zramSwap.enable = false;
-  /*
-    zramSwap = {
-      enable = true;
-      memoryMax = 16 * 1024 * 1024 * 1024; # 16 GB ZRAM
-    };
-  */
-
   networking.hostName = "vengeance";
 
   services.lact.enable = true; # https://mynixos.com/nixpkgs/options/services.lact
@@ -69,18 +37,5 @@
 
     };
   */
-  users.users.dylan = {
-    packages = with pkgs; [
-      # tricks override to fix audio
-      # see https://github.com/fufexan/nix-gaming/issues/165#issuecomment-2002038453
-      (inputs.nix-gaming.packages.${pkgs.hostPlatform.system}.star-citizen.override {
-        tricks = [
-          "arial"
-          "vcrun2019"
-          "win10"
-          "sound=alsa"
-        ];
-      })
-    ];
-  };
+
 }

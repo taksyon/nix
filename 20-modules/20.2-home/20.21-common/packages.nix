@@ -81,7 +81,7 @@
     app2unit
 
     # Misc
-    jdk21
+    jdk25
     nixfmt
     xournalpp
     node2nix
