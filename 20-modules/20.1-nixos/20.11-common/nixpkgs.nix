@@ -50,6 +50,7 @@
   # for VM's
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.host.enableExtensionPack = true;
+  virtualisation.docker.enable = true;
 
   # SYSTEM FONTS
   fonts.packages = with pkgs; [
@@ -76,7 +77,9 @@
     blueman
     brightnessctl
     btop
+    bzip2
 
+    claude-code
     clang-tools
     curl
     snapshot

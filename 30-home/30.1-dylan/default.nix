@@ -43,6 +43,7 @@ in
 
   };
 
+  #
   home.stateVersion = "25.11";
 
   # custom file sourcing

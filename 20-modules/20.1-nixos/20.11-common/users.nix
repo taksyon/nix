@@ -6,6 +6,7 @@
     description = "dylan";
     extraGroups = [
       "audio"
+      "docker"
       "i2c"
       "input"
       "networkmanager"
