@@ -86,6 +86,7 @@
     xournalpp
     node2nix
     prismlauncher
+    obsidian # note taking
     yazi
     pulseaudio
     pavucontrol
