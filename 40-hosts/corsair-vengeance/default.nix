@@ -6,9 +6,9 @@
 }:
 {
   imports = [
-    ../40.1-common/boot.nix
-    ../40.1-common/nixos.nix
-    ../40.1-common/roles/desktop.nix
+    ../common/boot.nix
+    ../common/nixos.nix
+    ../common/roles/desktop.nix
     ./hardware-configuration.nix
     ./modules.nix
   ];
@@ -26,9 +26,6 @@
     "fs.file-max" = 524288;
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   boot.kernelParams = [
     "zswap.enabled=1"
     "zswap.compressor=zstd"
@@ -51,9 +48,6 @@
     };
   */
 
->>>>>>> d9e700f (removed hosts that I gave away)
-=======
->>>>>>> 2b00929 (many changes to shell.json for desktop)
   networking.hostName = "vengeance";
 
   services.lact.enable = true; # https://mynixos.com/nixpkgs/options/services.lact
@@ -62,16 +56,10 @@
       # https://mynixos.com/options/services.foldingathome
       # Protein folding sims -- folding@home
       enable = true;
-<<<<<<< HEAD
 
     };
   */
 
-=======
-
-    };
-  */
-<<<<<<< HEAD
   users.users.dylan = {
     packages = with pkgs; [
       # tricks override to fix audio
@@ -86,8 +74,5 @@
       })
     ];
   };
->>>>>>> d9e700f (removed hosts that I gave away)
-=======
 
->>>>>>> 2b00929 (many changes to shell.json for desktop)
 }

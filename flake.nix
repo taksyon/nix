@@ -7,6 +7,8 @@
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
 
+    qylock.url = "github:Darkkal44/qylock";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -50,7 +52,6 @@
       home-manager,
       ...
     }@inputs:
-    # idk just wanna update
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
@@ -62,7 +63,7 @@
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "backup";
 
-          home-manager.users.dylan = import ./30-home/30.1-dylan/default.nix;
+          home-manager.users.dylan = import ./30-home/dylan/default.nix;
 
           home-manager.extraSpecialArgs = {
             inherit host inputs;
@@ -89,8 +90,8 @@
     in
     {
       nixosConfigurations = {
-        yoga9intel = mkHost "yoga9intel" ./40-hosts/40.3-yoga9intel/default.nix;
-        vengeance = mkHost "vengeance" ./40-hosts/40.6-corsair-vengeance/default.nix;
+        yoga9intel = mkHost "yoga9intel" ./40-hosts/yoga9intel/default.nix;
+        vengeance = mkHost "vengeance" ./40-hosts/corsair-vengeance/default.nix;
       };
     };
 }

@@ -15,5 +15,4 @@
       pull.rebase = true;
     };
   };
-  services.ssh.startAgent = true;
 }

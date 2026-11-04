@@ -71,11 +71,6 @@ in
         # };
       };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2b00929 (many changes to shell.json for desktop)
       general.idle.timeouts = [
         {
           timeout = 80000;
@@ -95,12 +90,6 @@ in
         }
       ];
 
-<<<<<<< HEAD
->>>>>>> 12ce3fa (buncha changes)
-=======
-=======
->>>>>>> e10913c (many changes to shell.json for desktop)
->>>>>>> 2b00929 (many changes to shell.json for desktop)
       paths.wallpaperDir = "~/Pictures/Wallpapers";
     };
 

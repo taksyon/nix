@@ -56,9 +56,11 @@
     enable = true;
     enableHidpi = true;
     wayland.enable = true;
-    theme = "${
-      pkgs.where-is-my-sddm-theme.override { variants = [ "qt5" ]; }
-    }/share/sddm/themes/where_is_my_sddm_theme_qt5";
+    /*
+      theme = "${
+        pkgs.where-is-my-sddm-theme.override { variants = [ "qt5" ]; }
+      }/share/sddm/themes/where_is_my_sddm_theme_qt5";
+    */
     # extraPackages = [
     # pkgs.sddm-astronaut
     # ];

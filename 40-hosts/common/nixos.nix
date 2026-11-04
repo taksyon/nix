@@ -2,14 +2,14 @@
 
 {
   imports = [
-    ../../20-modules/20.1-nixos/20.11-common/users.nix
-    ../../20-modules/20.1-nixos/20.11-common/nixpkgs.nix
-    ../../20-modules/20.1-nixos/20.12-services/networking.nix
-    ../../20-modules/20.1-nixos/20.12-services/dashboard.nix
-    ../../20-modules/20.1-nixos/20.12-services/power.nix
-    ../../20-modules/20.1-nixos/20.12-services/audio.nix
-    ../../20-modules/20.1-nixos/20.12-services/services.nix
-    ../../20-modules/20.1-nixos/20.13-desktop/visual.nix
+    ../../20-modules/nixos/common/users.nix
+    ../../20-modules/nixos/common/nixpkgs.nix
+    ../../20-modules/nixos/services/networking.nix
+    ../../20-modules/nixos/services/dashboard.nix
+    ../../20-modules/nixos/services/power.nix
+    ../../20-modules/nixos/services/audio.nix
+    ../../20-modules/nixos/services/services.nix
+    ../../20-modules/nixos/desktop/visual.nix
   ];
 
   time.timeZone = "America/New_York";

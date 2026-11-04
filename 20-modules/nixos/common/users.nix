@@ -19,6 +19,7 @@
 
   programs.fish.enable = true;
   #programs.zsh.enable = true;
+  programs.ssh.startAgent = true;
 
   security.sudo = {
     enable = true;

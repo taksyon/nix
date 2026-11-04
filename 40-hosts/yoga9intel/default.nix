@@ -2,9 +2,9 @@
 
 {
   imports = [
-    ../40.1-common/boot.nix
-    ../40.1-common/nixos.nix
-    ../40.1-common/roles/laptop.nix
+    ../common/boot.nix
+    ../common/nixos.nix
+    ../common/roles/laptop.nix
     ./hardware-configuration.nix
     ./modules.nix
   ];
