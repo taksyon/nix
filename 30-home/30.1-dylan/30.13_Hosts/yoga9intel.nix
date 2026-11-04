@@ -47,9 +47,11 @@
       source = $hl/gestures.conf
       source = $hl/keybinds.conf
 
-      # User configs
+      # User configs dd
+      # comment
       exec = mkdir -p $cConf && touch -a $cConf/hypr-user.conf
       source = $cConf/hypr-user.conf
+      exec = rfkill unblock bluetooth
     '';
     /*
         # hyprland settings
@@ -60,9 +62,11 @@
     */
   };
 
-  xdg.configFile."hypr/scripts/osk.sh" = {
-    source = ../30.12_Source/scripts/osk.sh;
-    executable = true;
-  };
+  /*
+    xdg.configFile."hypr/scripts/osk.sh" = {
+      source = ../30.12_Source/scripts/osk.sh;
+      executable = true;
+    } ;
+  */
 
 }

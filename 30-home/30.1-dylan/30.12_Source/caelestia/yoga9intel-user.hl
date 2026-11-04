@@ -5,6 +5,9 @@ unbind = Super, mouse_down
 unbind = Super, mouse_up
 unbind = Super, B
 unbind = Ctrl+Super+Alt, R
+# unbind = , Print, exec, caelestia screenshot  # Full screen capture > clipboard
+# unbind = Super+Shift, S
+# unbind = Super+Shift+Alt, S
 
 bindl = , Print, global, caelestia:screenshotFreeze  # Capture region (freeze)
 bind = Super+Shift, W, exec, caelestia wallpaper --random ~/Pictures/Wallpapers/
@@ -12,25 +15,26 @@ bind = Super, mouse_down, workspace, +1
 bind = Super, mouse_up, workspace, -1
 bind = Super, B, exec, app2unit -- firefox
 bindr = Ctrl+Super+Alt, R, exec, pkill quickshell && sleep 1s && caelestia shell -d
-bindl = , switch:on:Lenovo\ Yoga\ Tablet\ Mode\ Control\ switch, exec, ~/.config/hypr/scripts/osk.sh on
+# bindl = , switch:on:Lenovo\ Yoga\ Tablet\ Mode\ Control\ switch, exec, ~/.config/hypr/scripts/osk.sh on
 
-bindl = , switch:off:Lenovo\ Yoga\ Tablet\ Mode\ Control\ switch, exec, ~/.config/hypr/scripts/osk.sh off
+# bindl = , switch:off:Lenovo\ Yoga\ Tablet\ Mode\ Control\ switch, exec, ~/.config/hypr/scripts/osk.sh off
 
 gesture = $gestureFingers, pinch, fullscreen
 gesture = $gestureFingersMore, down, unset
 gesture = $gestureFingersMore, swipe, move
+gesture = $gestureFingersMore, pinch, resize
 
 # !!!
 windowrule = float, class:foot
-windowrule = size 40% 40%, class:foot
-windowrule = center 1, class:foot
+windowrule = size 60% 60%, class:foot
+# windowrule = center 1, class:foot
 
 monitor = eDP-1,2880x1800@120, auto, 1.6
 
-exec-once = hyprctl dispatch exec caelestia wallpaper --random ~/Pictures/Wallpapers
-exec-once = hyprctl dispatch exec \[ workspace 1 silent \] app2unit -- code
-exec-once = hyprctl dispatch exec \[ workspace 2 silent \] app2unit -- firefox 
-exec-once = hyprctl dispatch exec \[ workspace 3 silent \] app2unit -- protonvpn-app 
+# exec-once = hyprctl dispatch exec \[ workspace 1 silent \] app2unit -- code
+# exec-once = hyprctl dispatch exec \[ workspace 2 silent \] app2unit -- firefox 
+# exec-once = hyprctl dispatch exec \[ workspace 3 silent \] app2unit -- protonvpn-app 
+# exec-once = hyprctl dispatch exec caelestia wallpaper --random ~/Pictures/Wallpapers
 
 plugin {
  touch_gestures {

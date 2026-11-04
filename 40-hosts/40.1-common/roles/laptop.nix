@@ -29,6 +29,7 @@
   };
 
   hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
 
   powerManagement.enable = true;
   powerManagement.powertop.enable = true;

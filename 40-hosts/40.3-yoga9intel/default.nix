@@ -15,6 +15,7 @@
     "i2c_hid"
     "i2c_hid_acpi"
     "hid_multitouch"
+    "btusb"
   ];
 
   hardware.enableAllFirmware = true;
