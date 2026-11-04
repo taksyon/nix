@@ -195,6 +195,7 @@
         {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           "timeout": 10,
           "idleAction": "echo"
         },
@@ -215,6 +216,8 @@
           "idleAction": "brightnessctl set 0",
           "returnAction": "brightnessctl set 80%"
 =======
+=======
+>>>>>>> 66adbe2 (messy merge)
           "timeout": 10,
           "idleAction": "echo"
         },
@@ -225,8 +228,11 @@
         {
           "timeout": 3600,
           "idleAction": ["systemctl", "suspend-then-hibernate"]
+<<<<<<< HEAD
 >>>>>>> e10913c (many changes to shell.json for desktop)
 >>>>>>> 2b00929 (many changes to shell.json for desktop)
+=======
+>>>>>>> 66adbe2 (messy merge)
         }
       ]
     }
