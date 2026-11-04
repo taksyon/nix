@@ -36,7 +36,7 @@
 
     shellAliases = {
       #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      # syntax: sh
+      # syntax: shel
       javadocs = "javadoc -d ./docs -sourcepath . *.java";
       fetch = "fastfetch";
       binds = "more ~/.config/keybindings.md";

@@ -7,17 +7,19 @@
     discord
     signal-desktop
     telegram-desktop
+    colloid-gtk-theme
 
     vlc
     mpv
 
+    chromium
     # steam
     lutris
     heroic
     mangohud
     gamemode
     mangohud
-    wine
+    wineWowPackages.stable
     winetricks
     protonup-qt
     cabextract
@@ -38,6 +40,7 @@
     curl
     btop
     tmux
+    brave
     tealdeer # Rust impl of tldr package
 
     gcc
