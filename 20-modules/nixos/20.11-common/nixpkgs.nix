@@ -26,6 +26,11 @@
     lfs.enable = true;
   };
 
+  programs.java = {
+    enable = true;
+    package = pkgs.jdk25;
+  };
+
   programs.steam = {
     enable = true;
     # VR =====
@@ -45,10 +50,12 @@
   # VR
   programs.alvr.enable = true;
   programs.alvr.openFirewall = true;
+  programs.obs-studio.enable = true;
 
   # for VM's
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.host.enableExtensionPack = true;
+  virtualisation.docker.enable = true;
 
   # SYSTEM FONTS
   fonts.packages = with pkgs; [
@@ -76,9 +83,14 @@
     blueman
     brightnessctl
     btop
+    bzip2
 
+    claude-code
     clang-tools
     curl
+    snapshot
+
+    dmidecode # https://www.nongnu.org/dmidecode/
 
     dmidecode # https://www.nongnu.org/dmidecode/
 
@@ -162,5 +174,6 @@
 
     zathura
     zip
+    zstd
   ];
 }

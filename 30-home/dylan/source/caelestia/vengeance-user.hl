@@ -8,7 +8,7 @@ unbind = Super+Ctrl+Alt, R
 bind = Ctrl+Super+Alt, R, exec, pkill quickshell; caelestia shell -d
 
 bindl = , Print, global, caelestia:screenshotFreeze  # Capture region (freeze)
-bind = Super+Shift, W, exec, caelestia wallpaper --random ~/Pictures/wallpapers/
+bind = Super+Shift, W, exec, caelestia wallpaper --random ~/Pictures/Wallpapers/
 bind = Super, mouse_down, workspace, +1
 bind = Super, mouse_up, workspace, -1
 bind = Super, B, exec, app2unit -- firefox
@@ -17,18 +17,23 @@ gesture = $gestureFingers, pinch, fullscreen
 gesture = $gestureFingersMore, down, unset
 gesture = $gestureFingersMore, swipe, move
 
-monitor = DP-2, preferred, 2160x1600, 1, vrr, 3, bitdepth, 10
-monitor = DP-3, preferred, 0x0, 1, vrr, 3, bitdepth, 10, #transform, 3
+monitor = DP-2, preferred, 3840x0, 1, vrr, 3, bitdepth, 10
+monitor = DP-3, preferred, 0x0, 1, vrr, 3, bitdepth, 10
 
 # exec-once = hyprctl dispatch exec \[workspace 3 silent\] app2unit -- foot btop && hyprctl dispatch movetoworkspacesilent \[ fullscreen \] special,foot 
 
-workspace = 1, monitor:DP-3
+# workspace = 1, monitor:DP-3
 # workspace = 11, monitor:DP-2
 
-exec-once = hyprctl dispatch exec [workspace 1] app2unit -- firefox   
+exec-once = hyprctl dispatch exec app2unit -- firefox   
+
 # exec-once = hyprctl dispatch exec caelestia wallpaper --random ~/Pictures/Wallpapers
 
 # !!!
 windowrule = float, class:foot
 windowrule = size 60% 40%, class:foot
+
+# !!!
+windowrule = float, class:foot
+windowrule = size 40% 40%, class:foot
 # windowrule = center 1, class:foot

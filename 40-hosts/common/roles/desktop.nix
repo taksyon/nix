@@ -15,7 +15,15 @@
       libvdpau-va-gl # VDPAU → VA-API translation via OpenGL
     ];
   };
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    settings = {
+      General = {
+        Enable = "Source,Sink,Media,Socket";
+        Experimental = true;
+      };
+    };
+  };
   boot.plymouth = {
     enable = true;
     theme = "rings";

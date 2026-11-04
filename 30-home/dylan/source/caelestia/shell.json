@@ -5,25 +5,152 @@
         "scale": 1
       }
     },
-    "font": {
-      "family": {
-        "clock": "Rubik",
-        "material": "Material Symbols Rounded",
-        "mono": "CaskaydiaCove NF",
-        "sans": "Rubik"
-      },
-      "size": {
-        "scale": 1
-      }
-    },
-    "padding": {
-      "scale": 1
-    },
+    "deformScale": 1,
     "rounding": {
       "scale": 1
     },
     "spacing": {
       "scale": 1
+    },
+    "padding": {
+      "scale": 1
+    },
+    "font": {
+      "scale": 1,
+      "clock": "Rubik",
+      "workspaces": "Rubik",
+      "headline": {
+        "family": "GoogleSansFlex",
+        "large": {
+          "size": 32,
+          "weight": 500,
+          "italic": false,
+          "vaxes": { "ROND": 25 }
+        },
+        "medium": {
+          "size": 28,
+          "weight": 500,
+          "italic": false,
+          "vaxes": { "ROND": 25 }
+        },
+        "small": {
+          "size": 24,
+          "weight": 500,
+          "italic": false,
+          "vaxes": { "ROND": 25 }
+        }
+      },
+      "title": {
+        "family": "GoogleSansFlex",
+        "large": {
+          "size": 22,
+          "weight": 500,
+          "italic": false,
+          "vaxes": { "ROND": 25 }
+        },
+        "medium": {
+          "size": 16,
+          "weight": 500,
+          "italic": false,
+          "vaxes": { "ROND": 25 }
+        },
+        "small": {
+          "size": 14,
+          "weight": 500,
+          "italic": false,
+          "vaxes": { "ROND": 25 }
+        }
+      },
+      "body": {
+        "family": "GoogleSansFlex",
+        "large": {
+          "size": 16,
+          "weight": 400,
+          "italic": false,
+          "vaxes": { "ROND": 25 }
+        },
+        "medium": {
+          "size": 14,
+          "weight": 400,
+          "italic": false,
+          "vaxes": { "ROND": 25 }
+        },
+        "small": {
+          "size": 12,
+          "weight": 400,
+          "italic": false,
+          "vaxes": { "ROND": 25 }
+        }
+      },
+      "label": {
+        "family": "GoogleSansFlex",
+        "large": {
+          "size": 14,
+          "weight": 500,
+          "italic": false,
+          "vaxes": { "ROND": 25 }
+        },
+        "medium": {
+          "size": 12,
+          "weight": 500,
+          "italic": false,
+          "vaxes": { "ROND": 25 }
+        },
+        "small": {
+          "size": 11,
+          "weight": 400,
+          "italic": false,
+          "vaxes": { "ROND": 25 }
+        }
+      },
+      "mono": {
+        "family": "CaskaydiaCove NF",
+        "large": {
+          "size": 16,
+          "weight": 400,
+          "italic": false,
+          "vaxes": {}
+        },
+        "medium": {
+          "size": 14,
+          "weight": 400,
+          "italic": false,
+          "vaxes": {}
+        },
+        "small": {
+          "size": 12,
+          "weight": 400,
+          "italic": false,
+          "vaxes": {}
+        }
+      },
+      "icon": {
+        "family": "Material Symbols Rounded",
+        "extraLarge": {
+          "size": 36,
+          "weight": 400,
+          "italic": false,
+          "vaxes": {}
+        },
+        "large": {
+          "size": 24,
+          "weight": 400,
+          "italic": false,
+          "vaxes": {}
+        },
+        "medium": {
+          "size": 18,
+          "weight": 400,
+          "italic": false,
+          "vaxes": {}
+        },
+        "small": {
+          "size": 15,
+          "weight": 400,
+          "italic": false,
+          "vaxes": {}
+        }
+      }
     },
     "transparency": {
       "enabled": false,
@@ -62,13 +189,17 @@
       "criticalLevel": 3
     },
     "idle": {
-      "lockBeforeSleep": true,
+      "lockBeforeSleep": false,
       "inhibitWhenAudio": true,
       "timeouts": [
         {
           "timeout": 300,
           "idleAction": "brightnessctl set 0",
           "returnAction": "brightnessctl set 80%"
+        },
+        {
+          "timeout": 3600,
+          "idleAction": ["systemctl", "suspend-then-hibernate"]
         }
       ]
     }
@@ -80,7 +211,7 @@
     "enabled": true,
     "visualiser": {
       "blur": true,
-      "enabled": true,
+      "enabled": false,
       "autoHide": true,
       "rounding": 1,
       "spacing": 1
@@ -138,7 +269,7 @@
     "scrollActions": {
       "brightness": false,
       "workspaces": true,
-      "volume": false
+      "volume": true
     },
     "showOnHover": true,
     "status": {
@@ -318,9 +449,9 @@
   "notifs": {
     "actionOnClick": true,
     "clearThreshold": 0.3,
-    "defaultExpireTimeout": 5000,
+    "defaultExpireTimeout": 90,
     "expandThreshold": 20,
-    "expire": false
+    "expire": true
   },
   "osd": {
     "enabled": true,
@@ -345,7 +476,7 @@
       }
     ],
     "weatherLocation": "",
-    "useFahrenheit": false,
+    "useFahrenheit": true,
     "useTwelveHourClock": false,
     "smartScheme": true,
     "visualiserBars": 45

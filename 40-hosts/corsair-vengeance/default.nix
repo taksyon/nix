@@ -4,16 +4,6 @@
   inputs,
   ...
 }:
-/*
-  let
-    nix-gaming = import (
-      builtins.fetchTarball {
-        url = "https://github.com/fufexan/nix-gaming/archive/master.tar.gz";
-        # sha256 = "3c85dac50d8494bba399e94c3ac41a5015fcc13ec4831782b9440dd14cfde9c5";
-      }
-    );
-  in
-*/
 {
   imports = [
     ../40.1-common/boot.nix
@@ -36,22 +26,52 @@
     "fs.file-max" = 524288;
   };
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  boot.kernelParams = [
+    "zswap.enabled=1"
+    "zswap.compressor=zstd"
+    "zswap.zpool=z3fold"
+    "zswap.max_pool_percent=20"
+  ];
+
   # See RAM, ZRAM & Swap
   swapDevices = [
     {
       device = "/var/lib/swapfile";
-      size = 8 * 1024; # 8 GB Swap
+      size = 64 * 1024; # 64 GB Swap
     }
   ];
-  zramSwap = {
-    enable = true;
-    memoryMax = 16 * 1024 * 1024 * 1024; # 16 GB ZRAM
-  };
+  zramSwap.enable = false;
+  /*
+    zramSwap = {
+      enable = true;
+      memoryMax = 16 * 1024 * 1024 * 1024; # 16 GB ZRAM
+    };
+  */
 
+>>>>>>> d9e700f (removed hosts that I gave away)
+=======
+>>>>>>> 2b00929 (many changes to shell.json for desktop)
   networking.hostName = "vengeance";
 
-  services.lact.enable = true;
+  services.lact.enable = true; # https://mynixos.com/nixpkgs/options/services.lact
+  /*
+    services.foldingathome = {
+      # https://mynixos.com/options/services.foldingathome
+      # Protein folding sims -- folding@home
+      enable = true;
+<<<<<<< HEAD
 
+    };
+  */
+
+=======
+
+    };
+  */
+<<<<<<< HEAD
   users.users.dylan = {
     packages = with pkgs; [
       # tricks override to fix audio
@@ -66,4 +86,8 @@
       })
     ];
   };
+>>>>>>> d9e700f (removed hosts that I gave away)
+=======
+
+>>>>>>> 2b00929 (many changes to shell.json for desktop)
 }

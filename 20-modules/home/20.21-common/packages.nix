@@ -21,6 +21,7 @@
     mangohud
     wineWowPackages.stable
     winetricks
+    protonup-qt
     cabextract
     inkscape # vector gfx editor
 
@@ -83,11 +84,12 @@
     app2unit
 
     # Misc
-    jdk21
+    jdk25
     nixfmt
     xournalpp
     node2nix
     prismlauncher
+    obsidian # note taking
     yazi
     pulseaudio
     pavucontrol
