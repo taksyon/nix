@@ -7,7 +7,10 @@
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
 
-    qylock.url = "github:Darkkal44/qylock";
+    qylock = {
+      url = "github:Darkkal44/qylock";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -85,6 +88,7 @@
             hostPath
             home-manager.nixosModules.home-manager
             hmModule
+            inputs.qylock.nixosModules.default
           ];
         };
     in

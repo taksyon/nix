@@ -6,17 +6,14 @@
   ...
 }:
 let
-  src = "${inputs.self}/30-home/30.1-dylan/30.12_Source";
+  src = "${inputs.self}/30-home/dylan/source";
 
-  isYoga7Amd = host == "yoga7amd";
   isYoga9Intel = host == "yoga9intel";
   isVengeance = host == "vengeance";
 
   hyprVars =
     if isYoga9Intel then
       "${src}/caelestia/yoga9intel-vars.hl"
-    else if isYoga7Amd then
-      "${src}/caelestia/yoga7amd-vars.hl"
     else if isVengeance then
       "${src}/caelestia/vengeance-vars.hl"
     else
@@ -25,8 +22,6 @@ let
   hyprUser =
     if isYoga9Intel then
       "${src}/caelestia/yoga9intel-user.hl"
-    else if isYoga7Amd then
-      "${src}/caelestia/yoga7amd-user.hl"
     else if isVengeance then
       "${src}/caelestia/vengeance-user.hl"
     else

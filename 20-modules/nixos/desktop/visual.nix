@@ -1,20 +1,14 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  ...
+}@inputs:
 
-/*
-  let
-    custom-elegant-sddm = pkgs.elegant-sddm.override {
-      variants = [ "qt5" ];
-      themeConfig.General.background = "${pkgs.nixos-artwork.wallpapers.simple-dark-gray-bottom.gnomeFilePath
-      }";
-    };
-  in
-*/
 {
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
     withUWSM = true;
-
   };
 
   programs.thunar = {
@@ -41,34 +35,16 @@
     enable = true;
 
   };
-  # Gnome as a backup
-  /*
-    services.desktopManager.gnome.enable = true;
-    services.gnome.core-apps.enable = false;
-    services.gnome.core-developer-tools.enable = false;
-    services.gnome.games.enable = false;
-    environment.gnome.excludePackages = with pkgs; [
-      gnome-tour
-      gnome-user-docs
-    ];
-  */
+
   services.displayManager.sddm = {
     enable = true;
     enableHidpi = true;
     wayland.enable = true;
-    /*
-      theme = "${
-        pkgs.where-is-my-sddm-theme.override { variants = [ "qt5" ]; }
-      }/share/sddm/themes/where_is_my_sddm_theme_qt5";
-    */
-    # extraPackages = [
-    # pkgs.sddm-astronaut
-    # ];
   };
 
   programs.qylock = {
     enable = true;
-    theme = "nier-automata"; # any directory name under themes/
+    theme = "clockwork"; # any directory name under themes/
     # sddm.enable = true;             # installs theme + sets it active (default)
     # quickshell.enable = true;       # adds `qylock-lock` to PATH (default)
 
