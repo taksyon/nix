@@ -53,7 +53,7 @@ in
   xdg.configFile."foot/foot.ini".source = ./source/foot/foot.ini;
   xdg.configFile."caelestia/shell.json".source = ./source/caelestia/shell.json;
   xdg.configFile."caelestia/cli.json".source = ./source/caelestia/cli.json;
-
+  #
   home.packages = with pkgs; [
     protonvpn-gui
   ];

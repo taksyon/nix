@@ -44,7 +44,7 @@
 
   programs.qylock = {
     enable = true;
-    theme = "clockwork"; # any directory name under themes/
+    theme = "pixel-skyscrapers"; # any directory name under themes/
     # sddm.enable = true;             # installs theme + sets it active (default)
     # quickshell.enable = true;       # adds `qylock-lock` to PATH (default)
 
