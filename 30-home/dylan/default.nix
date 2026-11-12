@@ -26,6 +26,7 @@ in
     ../../20-modules/home/common/shell.nix
     ../../20-modules/home/ui/ui.nix
     # ../../20-modules/home/apps/hyprland.nix
+    ../../20-modules/home/apps/vscode.nix
     ../../20-modules/home/apps/caelestia.nix
     ../../20-modules/home/apps/zathura.nix
 

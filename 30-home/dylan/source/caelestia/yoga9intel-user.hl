@@ -34,7 +34,7 @@ monitor = eDP-1,2880x1800@120, auto, 1.6
 # exec-once = hyprctl dispatch exec \[ workspace 1 silent \] app2unit -- code
 # exec-once = hyprctl dispatch exec \[ workspace 2 silent \] app2unit -- firefox 
 # exec-once = hyprctl dispatch exec \[ workspace 3 silent \] app2unit -- protonvpn-app 
-# exec-once = hyprctl dispatch exec caelestia wallpaper --random ~/Pictures/Wallpapers
+exec-once = hyprctl dispatch exec caelestia wallpaper --random ~/Pictures/Wallpapers
 
 plugin {
  touch_gestures {

@@ -68,7 +68,11 @@
 
           home-manager.extraSpecialArgs = {
             inherit host inputs;
-            inherit (inputs) caelestia-shell iio-hyprland hyprgrass;
+            inherit (inputs)
+              caelestia-shell
+              iio-hyprland
+              hyprgrass
+              ;
           };
           home-manager.users.dylan = import ./30-home/dylan/default.nix;
         };

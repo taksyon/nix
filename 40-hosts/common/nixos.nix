@@ -40,7 +40,7 @@
       DisableFirefoxStudies = true;
       EnableTrackingProtection = {
         Value = true;
-        Locked = true;
+        Locked = false;
         Cryptomining = true;
         Fingerprinting = true;
       };
@@ -96,12 +96,14 @@
           installation_mode = "normal_installed";
           private_browsing = true;
         };
-        # Privacy Badger:
-        "jid1-MnnxcxisBPnSXQ@jetpack" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/jid1-MnnxcxisBPnSXQ@jetpack/latest.xpi";
-          installation_mode = "normal_installed";
-          private_browsing = true;
-        };
+        /*
+          # Privacy Badger:
+               "jid1-MnnxcxisBPnSXQ@jetpack" = {
+                 install_url = "https://addons.mozilla.org/firefox/downloads/latest/jid1-MnnxcxisBPnSXQ@jetpack/latest.xpi";
+                 installation_mode = "normal_installed";
+                 private_browsing = true;
+               };
+        */
         # Dark Reader:
         "addon@darkreader.org" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/file/4638146/darkreader-4.9.118.xpi";

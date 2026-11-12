@@ -110,11 +110,16 @@
     git
     gparted
     gnome.gvfs
-    image-roll
+    gst_all_1.gstreamer
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-good
+    gst_all_1.gst-plugins-bad
+    gst_all_1.gst-plugins-ugly
 
     home-manager
     htop
 
+    image-roll
     i2c-tools
     input-remapper
     util-linux
@@ -161,7 +166,7 @@
     util-linux
 
     vlc
-    vscode
+    # vscode
 
     wget
     wine-staging
