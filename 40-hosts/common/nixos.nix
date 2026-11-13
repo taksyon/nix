@@ -110,9 +110,25 @@
       };
     };
   };
+
   environment.sessionVariables = {
     # Firefox: improves touchscreen support and enables more touchpad gestures
     MOZ_USE_XINPUT2 = "1";
   };
+
+  nix = {
+    settings = {
+      auto-optimise-store = true; # Saves space by sharing identical files
+    };
+
+    # Garbage collection
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 14d";
+
+    };
+  };
+
   system.stateVersion = "25.11";
 }

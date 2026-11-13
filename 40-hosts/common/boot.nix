@@ -2,8 +2,7 @@
 
 {
   boot = {
-    # enables magic REISUB clutch
-    kernel.sysctl."kernel.sysrq" = 176;
+    kernel.sysctl."kernel.sysrq" = 176; # enables magic REISUB clutch
 
     kernelPatches = [
       {
@@ -15,8 +14,19 @@
       }
     ];
 
-    loader.systemd-boot.enable = true;
-    loader.efi.canTouchEfiVariables = true;
-    loader.timeout = 3;
+    loader = {
+      grub = {
+        theme = pkgs.sleek-grub-theme.override {
+          withStyle = "dark"; # "light", "dark", "orange", or "bigSur"
+          withBanner = "Welcome back!"; # text shown at the top
+        };
+        configurationLimit = 10;
+      };
+
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+      timeout = 5;
+    };
+
   };
 }
