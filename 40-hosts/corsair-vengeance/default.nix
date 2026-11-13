@@ -64,7 +64,7 @@
     packages = with pkgs; [
       # tricks override to fix audio
       # see https://github.com/fufexan/nix-gaming/issues/165#issuecomment-2002038453
-      (inputs.nix-gaming.packages.${pkgs.hostPlatform.system}.star-citizen.override {
+      (inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.star-citizen.override {
         tricks = [
           "arial"
           "vcrun2019"

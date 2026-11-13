@@ -27,6 +27,7 @@ let
     else
       "${src}/caelestia/hypr-user.hl";
 in
+
 {
   programs.caelestia = {
     enable = true;

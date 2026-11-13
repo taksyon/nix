@@ -19,7 +19,7 @@
     mangohud
     gamemode
     mangohud
-    wineWowPackages.stable
+    wineWow64Packages.stable
     winetricks
     protonup-qt
     cabextract
@@ -78,16 +78,13 @@
     git-crypt
     gh
 
-    nerd-fonts.fira-code
-    nerd-fonts.hack
-    nerd-fonts.iosevka
     app2unit
 
     # Misc
     jdk25
     nixfmt
     xournalpp
-    node2nix
+    # node2nix
     prismlauncher
     obsidian # note taking
     yazi

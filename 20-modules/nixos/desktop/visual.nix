@@ -13,7 +13,7 @@
 
   programs.thunar = {
     enable = true;
-    plugins = with pkgs.xfce; [
+    plugins = with pkgs; [
       thunar-archive-plugin
       thunar-volman
       thunar-vcs-plugin # adds git to thunar
@@ -44,7 +44,7 @@
 
   programs.qylock = {
     enable = true;
-    theme = "pixel-skyscrapers"; # any directory name under themes/
+    theme = "pixel-night-city"; # any directory name under themes/
     # sddm.enable = true;             # installs theme + sets it active (default)
     # quickshell.enable = true;       # adds `qylock-lock` to PATH (default)
 
@@ -78,9 +78,11 @@
     enable = true;
     lxqt = {
       enable = true;
-      styles = [
-        pkgs.libsForQt5.qtstyleplugin-kvantum
-      ];
+      /*
+        styles = [
+             pkgs.libsForQt5.qtstyleplugin-kvantum
+           ];
+      */
     };
     # extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
   };
@@ -106,11 +108,13 @@
 
     # Qt
     kdePackages.qtbase
-    libsForQt5.qt5.qtimageformats
-    libsForQt5.qt5.qtmultimedia
-    libsForQt5.qt5.qtsvg
-    libsForQt5.qt5.qtbase
     kdePackages.qt5compat
+    /*
+      libsForQt5.qt5.qtimageformats
+       libsForQt5.qt5.qtmultimedia
+       libsForQt5.qt5.qtsvg
+       libsForQt5.qt5.qtbase
+    */
 
     slurp
   ];

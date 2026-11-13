@@ -1,5 +1,5 @@
 
-# unbind = , Print
+unbind = , Print
 unbind = Super+Shift, W
 unbind = Super, mouse_down
 unbind = Super, mouse_up
@@ -7,7 +7,7 @@ unbind = Super, B
 unbind = Super+Ctrl+Alt, R
 bind = Ctrl+Super+Alt, R, exec, pkill quickshell; caelestia shell -d -n
 
-# bindl = , Print, global, caelestia:screenshotFreeze  # Capture region (freeze)
+bindl = , Print, global, caelestia:screenshotFreeze  # Capture region (freeze)
 bind = Super+Shift, W, exec, caelestia wallpaper --random ~/Pictures/Wallpapers/
 bind = Super, mouse_down, workspace, +1
 bind = Super, mouse_up, workspace, -1
@@ -27,3 +27,5 @@ monitor = DP-3, preferred, 0x0, 1, vrr, 3, bitdepth, 10
 windowrule = float, class:foot
 windowrule = size 40% 40%, class:foot
 # windowrule = center 1, class:foot
+
+exec-once = caelestia shell

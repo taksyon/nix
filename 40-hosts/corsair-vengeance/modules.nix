@@ -65,6 +65,6 @@
     hyprmon # for configuring monitors with keyboard and mouse
     openrgb
     brightnessctl
-    inputs.nix-citizen.packages.${system}.rsi-launcher
+    inputs.nix-citizen.packages.${stdenv.hostPlatform.system}.rsi-launcher
   ];
 }

@@ -41,7 +41,6 @@ in
 
   };
 
-  #
   home.stateVersion = "25.11";
 
   # custom file sourcing
@@ -50,12 +49,12 @@ in
   # xdg.configFile."btop/btop.conf".source = ./source/btop/btop.conf;
 
   #### foot.ini for reference only. do not source. --> /nix/20-modules/common/shell.nix
-  xdg.configFile."foot/foot.ini".source = ./source/foot/foot.ini;
+  # xdg.configFile."foot/foot.ini".source = ./source/foot/foot.ini;
   xdg.configFile."caelestia/shell.json".source = ./source/caelestia/shell.json;
-  xdg.configFile."caelestia/cli.json".source = ./source/caelestia/cli.json;
+  # xdg.configFile."caelestia/cli.json".source = ./source/caelestia/cli.json;
   #
   home.packages = with pkgs; [
-    protonvpn-gui
+    proton-vpn
   ];
 
 }

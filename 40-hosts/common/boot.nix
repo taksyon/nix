@@ -3,7 +3,7 @@
 {
   boot = {
     # enables magic REISUB clutch
-    kernel.sysctl."kernel.sysrq" = 582;
+    kernel.sysctl."kernel.sysrq" = 176;
 
     kernelPatches = [
       {
@@ -17,5 +17,6 @@
 
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
+    loader.timeout = 3;
   };
 }

@@ -7,9 +7,9 @@
     systemd.enable = true;
 
     #   plugins = [
-    #     inputs.hyprgrass.packages.${pkgs.system}.default
+    #     inputs.hyprgrass.packages.${pkgs.stdenv.hostPlatform.system}.default
     #     # optional integration with pulse-audio
-    #     inputs.hyprgrass.packages.${pkgs.system}.hyprgrass-pulse
+    #     inputs.hyprgrass.packages.${pkgs.stdenv.hostPlatform.system}.hyprgrass-pulse
     #   ];
     # };
 

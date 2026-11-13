@@ -68,6 +68,10 @@
     nerd-fonts.zed-mono
     nerd-fonts.caskaydia-cove
     nerd-fonts.caskaydia-mono
+    noto-fonts # most world scripts + symbols
+    noto-fonts-cjk-sans # Chinese / Japanese / Korean
+    noto-fonts-color-emoji # emoji
+    unifont # last-resort fallback, covers almost everything
 
   ];
 
@@ -89,8 +93,6 @@
     clang-tools
     curl
     snapshot
-
-    dmidecode # https://www.nongnu.org/dmidecode/
 
     dmidecode # https://www.nongnu.org/dmidecode/
 
@@ -168,7 +170,7 @@
 
     xclip
     xdg-utils
-    xfce.xfce4-settings
+    xfce4-settings
     xournalpp
     xrizer # VR
 

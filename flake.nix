@@ -7,13 +7,13 @@
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
 
-    qylock = {
-      url = "github:Darkkal44/qylock";
+    home-manager = {
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
+    qylock = {
+      url = "github:Darkkal44/qylock";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -66,12 +66,11 @@
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "backup";
 
-          home-manager.users.dylan = import ./30-home/dylan/default.nix;
-
           home-manager.extraSpecialArgs = {
             inherit host inputs;
             inherit (inputs) caelestia-shell iio-hyprland hyprgrass;
           };
+          home-manager.users.dylan = import ./30-home/dylan/default.nix;
         };
 
       mkHost =
