@@ -8,24 +8,27 @@
 let
   src = "${inputs.self}/30-home/dylan/source";
 
-  isYoga9Intel = host == "yoga9intel";
-  isVengeance = host == "vengeance";
+  # isYoga9Intel = host == "yoga9intel";
+  # isVengeance = host == "vengeance";
 
-  hyprVars =
+  hyprVars = "${src}/caelestia/hypr-vars.lua";
+  /*
     if isYoga9Intel then
-      "${src}/caelestia/yoga9intel-vars.hl"
-    else if isVengeance then
-      "${src}/caelestia/vengeance-vars.hl"
-    else
-      "${src}/caelestia/hypr-vars.hl";
-
-  hyprUser =
+       "${src}/caelestia/yoga9intel-vars.hl"
+     else if isVengeance then
+       "${src}/caelestia/vengeance-vars.hl"
+     else
+       "${src}/caelestia/hypr-vars.hl";
+  */
+  hyprUser = "${src}/caelestia/hypr-user.lua";
+  /*
     if isYoga9Intel then
-      "${src}/caelestia/yoga9intel-user.hl"
-    else if isVengeance then
-      "${src}/caelestia/vengeance-user.hl"
-    else
-      "${src}/caelestia/hypr-user.hl";
+       "${src}/caelestia/hypr-user.lua"
+     else if isVengeance then
+       "${src}/caelestia/vengeance-user.hl"
+     else
+       "${src}/caelestia/hypr-user.lua";
+  */
 in
 
 {
@@ -102,6 +105,6 @@ in
     };
   };
 
-  xdg.configFile."caelestia/hypr-vars.conf".source = hyprVars;
-  xdg.configFile."caelestia/hypr-user.conf".source = hyprUser;
+  xdg.configFile."caelestia/hypr-user.lua".source = hyprUser;
+  xdg.configFile."caelestia/hypr-vars.lua".source = hyprVars;
 }

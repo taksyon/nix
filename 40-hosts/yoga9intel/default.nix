@@ -10,7 +10,7 @@
   ];
 
   # change back to testing if sound no workey
-  boot.kernelPackages = pkgs.linuxPackages_testing;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [
     "i2c_hid"
     "i2c_hid_acpi"

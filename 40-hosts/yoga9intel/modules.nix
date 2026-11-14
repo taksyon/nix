@@ -54,7 +54,9 @@
 
   programs.iio-hyprland.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    squeekboard
-  ];
+  /*
+    environment.systemPackages = with pkgs; [
+      squeekboard
+    ] ;
+  */
 }

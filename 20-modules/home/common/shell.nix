@@ -4,6 +4,7 @@
   # foot
   programs.foot = {
     enable = true;
+    # theme = "selenized-black";
 
     /*
       settings = {
@@ -36,7 +37,6 @@
 
     shellAliases = {
       #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      # syntax: shel
       javadocs = "javadoc -d ./docs -sourcepath . *.java";
       fetch = "fastfetch";
       binds = "more ~/.config/keybindings.md";
@@ -48,7 +48,6 @@
 
       ip = "ip -c"; # -c = colorize
       nmcli = "nmcli --colors yes -p -m tabular";
-      yayfind = "yay -Ss --singlelineresults"; # -S = sync/search, -s = search
       lsblk = "lsblk -o NAME,LABEL,FSTYPE,FSUSE%,SIZE,MOUNTPOINT,UUID";
 
       sem = "cd ~/Education/bhcc/semesters/";
