@@ -6,6 +6,7 @@ hl.monitor({
     mode     = "2880x1800@120",
     position = "auto",
     scale    = 1.6,
+    vrr      = 3,
 })
 
 hl.config({

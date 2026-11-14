@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  options,
+  ...
+}:
 
 {
   imports = [
@@ -130,6 +135,16 @@
       options = "--delete-older-than 14d";
 
     };
+  };
+
+  # Hopefully fix dynamically linked executables (mostly)
+  programs.nix-ld = {
+    enable = true;
+    libraries =
+      options.programs.nix-ld.libraries.default
+      ++ (with pkgs; [
+        # extra libs go here as you need them
+      ]);
   };
 
   system.stateVersion = "25.11";
