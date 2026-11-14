@@ -83,6 +83,7 @@
     # Misc
     jdk25
     nixfmt
+    lua-language-server
     xournalpp
     # node2nix
     prismlauncher
