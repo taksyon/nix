@@ -56,9 +56,12 @@ return {
     sleepGestureCmd            = "systemctl suspend-then-hibernate",
     specialWsCloseAny          = true,
 
-    ------------------
-    ---- KEYBINDS ----
-    ------------------
+    -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    --    ▖▖    ▌ ▘   ▌
+    --    ▙▘█▌▌▌▛▌▌▛▌▛▌▛▘
+    --    ▌▌▙▖▙▌▙▌▌▌▌▙▌▄▌
+    --        ▄▌
+    -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
     -- Modifier only, the actual binds will be mod + 0-9. These should be strings and not arrays.
     kbGoToWs                   = "SUPER",
@@ -120,8 +123,8 @@ return {
     kbAudioSettings            = "CTRL + ALT + V",
 
     -- Utilities
-    kbScreenshot               = "Print",
-    kbScreenshotFreeze         = "SUPER + SHIFT + S",
+    kbScreenshot               = "SUPER + SHIFT + S",
+    kbScreenshotFreeze         = "Print",
     kbScreenshotRegion         = "SUPER + SHIFT + ALT + S",
     kbRecord                   = "CTRL + ALT + R",
     kbRecordSound              = "SUPER + ALT + R",

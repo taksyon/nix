@@ -1,10 +1,17 @@
 {
-	"folders": [
-		{
-			"path": ".."
-		}
-	],
-	"settings": {
-		"nixEnvSelector.suggestion": false
-	}
+    "folders": [
+        {
+            "path": "..",
+        },
+    ],
+    "settings": {
+        "nixEnvSelector.suggestion": false,
+        "Lua.format.defaultConfig": {
+            "indent_style": "space",
+            "indent_size": "2",
+            "align_continuous_assign_statement": "true",
+            "align_continuous_rect_table_field": "true",
+            "align_continuous_inline_comment": "true",
+        },
+    },
 }
