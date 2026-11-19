@@ -18,7 +18,9 @@
     "btusb"
   ];
 
-  # possible fix for panel refresh rate battery saver issue
+  # Panel Replay off, PSR capped at PSR1 (saves battery on a static screen).
+  # If stutter returns, try xe.enable_psr=0. The 120Hz dips on battery were TLP's
+  # GPU power profile, see INTEL_GPU_POWER_PROFILE_ON_BAT below.
   boot.kernelParams = [
     "xe.enable_panel_replay=0"
     "xe.enable_psr=1"
@@ -30,6 +32,9 @@
   services.lact.enable = true;
   services.tlp.settings = {
     STOP_CHARGE_THRESH_BAT0 = 1;
+    # TLP defaults the xe GPU to "power_saving" on battery, which downclocks so
+    # hard between frames that 120Hz animations drop to ~60fps in bursts.
+    INTEL_GPU_POWER_PROFILE_ON_BAT = "base";
   };
 
   # force refresh rate back to 120hz after resume from sleep
