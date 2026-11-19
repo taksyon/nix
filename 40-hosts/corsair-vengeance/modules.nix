@@ -61,10 +61,7 @@
   hardware.ckb-next.enable = true;
 
   environment.systemPackages = with pkgs; [
-    ckb-next
     hyprmon # for configuring monitors with keyboard and mouse
-    openrgb
-    brightnessctl
     inputs.nix-citizen.packages.${stdenv.hostPlatform.system}.rsi-launcher
   ];
 }

@@ -9,8 +9,12 @@
   imports = [
     ../../20-modules/nixos/common/users.nix
     ../../20-modules/nixos/common/nixpkgs.nix
+    ../../20-modules/nixos/common/fonts.nix
+    ../../20-modules/nixos/common/packages.nix
+    ../../20-modules/nixos/apps/gaming.nix
     ../../20-modules/nixos/services/networking.nix
     ../../20-modules/nixos/services/dashboard.nix
+    ../../20-modules/nixos/services/netmon.nix
     ../../20-modules/nixos/services/power.nix
     ../../20-modules/nixos/services/audio.nix
     ../../20-modules/nixos/services/services.nix
@@ -34,7 +38,17 @@
 
   console.keyMap = "us";
 
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    openFirewall = false; # opened on tailscale0 only, see networking.nix
+    settings = {
+      PermitRootLogin = "no";
+      # TODO: set to false once each machine's key is in
+      # users.users.dylan.openssh.authorizedKeys.keys
+      PasswordAuthentication = true;
+      KbdInteractiveAuthentication = false;
+    };
+  };
   services.locate.enable = true; # enables 'locate' command
 
   # Default browser
@@ -121,10 +135,6 @@
   };
 
   nix = {
-    settings = {
-      auto-optimise-store = true; # Saves space by sharing identical files
-    };
-
     # Garbage collection
     gc = {
       automatic = true;

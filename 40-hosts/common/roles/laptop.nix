@@ -1,35 +1,15 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}:
+{ pkgs, ... }:
 
 {
+  imports = [
+    ../../../20-modules/nixos/apps/virtualisation.nix
+    ./graphical.nix
+  ];
 
-  # boot loading screen
-  boot.plymouth = {
-    enable = true;
-    theme = "spin";
-    themePackages = with pkgs; [
-      (adi1090x-plymouth-themes.override {
-        selected_themes = [ "spin" ];
-      })
-    ];
-  };
-
-  # enable graphics
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-    extraPackages = with pkgs; [
-      libva-vdpau-driver
-      libvdpau-va-gl
-    ];
-  };
-
-  hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
+
+  # ntopng is installed but off at boot to save battery; toggle with `netmon on|off`
+  local.netmon.autostart = false;
 
   powerManagement.enable = true;
   powerManagement.powertop.enable = true;
@@ -47,8 +27,6 @@
     };
   };
 
-  services.blueman.enable = true;
-
   # Power management
   services.tlp.enable = true;
   services.tlp.settings = {
@@ -62,10 +40,7 @@
 
   # generic laptop tools
   environment.systemPackages = with pkgs; [
-    brightnessctl
     powertop
-    tlp
-    blueman
     acpi
   ];
 

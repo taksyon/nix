@@ -9,6 +9,10 @@
       "x-scheme-handler/https" = "firefox.desktop";
       "x-scheme-handler/about" = "firefox.desktop";
       "x-scheme-handler/unknown" = "firefox.desktop";
+      "image/png" = "qimgv.desktop";
+      "image/jpg" = "qimgv.desktop";
+      "image/jpeg" = "qimgv.desktop";
+      "image/webp" = "qimgv.desktop";
     };
   };
   home.packages = with pkgs; [
@@ -17,8 +21,9 @@
     discord
     signal-desktop
     telegram-desktop
-    colloid-gtk-theme
 
+    qimgv # image viewer
+    swayimg
     vlc
     mpv
 
@@ -28,7 +33,6 @@
     heroic
     mangohud
     gamemode
-    mangohud
     wineWow64Packages.stable
     winetricks
     protonup-qt
@@ -46,8 +50,6 @@
     hyprls
     jq
     direnv # for vscode extension
-    wget
-    curl
     btop
     tmux
     brave
@@ -84,7 +86,6 @@
     gopls
     shellcheck
 
-    git
     git-crypt
     gh
 

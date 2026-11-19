@@ -7,8 +7,10 @@
 
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 22 ];
+    allowedTCPPorts = [ ];
     allowedUDPPorts = [ ];
+    # SSH is only reachable over the tailnet, not the LAN/internet
+    interfaces.tailscale0.allowedTCPPorts = [ 22 ];
   };
 
   services.tailscale.enable = true; # VPN

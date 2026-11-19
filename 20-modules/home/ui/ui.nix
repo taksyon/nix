@@ -10,17 +10,19 @@
       name = "Rubik";
       size = 16;
     };
+    # Caelestia (cli.settings.theme.enableGtk) owns GTK styling: it hard-codes
+    # adw-gtk3-dark + Papirus in dconf and writes wallpaper-matched colours to
+    # ~/.config/gtk-{3,4}.0/gtk.css. These just have to match and be installed.
     theme = {
-      name = "Colloid";
-      package = pkgs.colloid-gtk-theme;
+      name = "adw-gtk3-dark";
+      package = pkgs.adw-gtk3;
     };
     iconTheme = {
-      name = "Colloid";
-      package = pkgs.colloid-icon-theme;
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
     };
-    gtk4 = {
-      theme = config.gtk.theme;
-    };
+    # don't let HM write gtk-4.0/gtk.css; Caelestia writes that file
+    gtk4.theme = null;
   };
 
   fonts = {
@@ -34,7 +36,8 @@
   };
 
   dconf.settings."org/gnome/desktop/interface" = {
-    gtk-theme = "Colloid";
+    gtk-theme = "adw-gtk3-dark";
+    icon-theme = "Papirus-Dark";
     color-scheme = "prefer-dark";
   };
 }

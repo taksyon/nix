@@ -22,6 +22,10 @@ in
             path = "https://dashy.to/docs";
           }
           {
+            title = "Workspace";
+            path = "http://dashy.local/workspace";
+          }
+          {
             title = "NixOS Options";
             path = "https://search.nixos.org/options";
           }
@@ -33,7 +37,7 @@ in
       };
 
       appConfig = {
-        theme = "nord-frost";
+        theme = "one-dark";
         layout = "auto";
         iconSize = "medium";
         language = "en";
@@ -46,6 +50,7 @@ in
       };
 
       sections = [
+        # Section ____________________
         {
           name = "Top Sites";
           icon = "fas fa-star";
@@ -55,27 +60,28 @@ in
           items = [
             {
               title = "GitHub";
-              icon = "fab fa-github";
+              icon = "si-github";
               url = "https://github.com";
             }
             {
               title = "Gmail";
-              icon = "fas fa-envelope";
+              icon = "si-gmail";
               url = "https://mail.google.com";
             }
             {
               title = "Calendar";
-              icon = "fas fa-calendar";
-              url = "https://calendar.google.com";
+              icon = "mdi-calendar-blank-outline";
+              url = "https://icloud.com/calendar";
             }
             {
-              title = "Drive";
-              icon = "fas fa-cloud";
-              url = "https://drive.google.com";
+              title = "iCloud";
+              icon = "mdi-cloud";
+              url = "https://icloud.com";
             }
           ];
         }
 
+        # Section ____________________
         {
           name = "NixOS";
           icon = "fas fa-snowflake";
@@ -106,6 +112,7 @@ in
           ];
         }
 
+        # Section ____________________
         {
           name = "Local Services (common ports)";
           icon = "fas fa-server";
@@ -119,9 +126,15 @@ in
               url = "http://127.0.0.1/";
             }
             {
+              title = "ntopng";
+              description = "Network traffic + alerts (laptop: `netmon on`)";
+              icon = "fas fa-network-wired";
+              url = "http://127.0.0.1:${toString config.local.netmon.port}";
+            }
+            {
               title = "Grafana";
               icon = "fas fa-chart-area";
-              url = "http://127.0.0.1:3000";
+              url = "http://127.0.0.1:3002";
             }
             {
               title = "Uptime Kuma";
@@ -146,7 +159,7 @@ in
             {
               title = "Gitea/Forgejo";
               icon = "fab fa-git-alt";
-              url = "http://127.0.0.1:3000";
+              url = "http://127.0.0.1:3003";
             }
             {
               title = "Portainer";
@@ -156,6 +169,7 @@ in
           ];
         }
 
+        # Section ____________________
         {
           name = "Homelab (placeholders)";
           icon = "fas fa-network-wired";
@@ -184,6 +198,7 @@ in
           ];
         }
 
+        # Section ____________________
         {
           name = "Crypto (links for now)";
           icon = "fab fa-bitcoin";
@@ -209,6 +224,7 @@ in
           ];
         }
 
+        # Section ____________________
         {
           name = "Notes";
           icon = "fas fa-note-sticky";
@@ -234,11 +250,19 @@ in
     };
   };
 
-  # Make it local-only by default (safe baseline across all hosts)
-  services.nginx.virtualHosts."dashy.local".listen = [
-    {
-      addr = "127.0.0.1";
-      port = 8080;
-    }
-  ];
+  # Local-only on port 80 (safe baseline across all hosts; the firewall keeps 80 closed anyway).
+  # default = true makes it answer for http://localhost and http://127.0.0.1 too,
+  # not only for the dashy.local hostname.
+  services.nginx.virtualHosts.${cfg.virtualHost.domain} = {
+    default = true;
+    listen = [
+      {
+        addr = "127.0.0.1";
+        port = 80;
+      }
+    ];
+  };
+
+  # so http://dashy.local resolves on this machine
+  networking.hosts."127.0.0.1" = [ cfg.virtualHost.domain ];
 }

@@ -72,7 +72,7 @@ in
 
       general.idle.timeouts = [
         {
-          timeout = 80000;
+          timeout = 800;
           idleAction = "lock";
         }
         {

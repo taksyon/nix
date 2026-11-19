@@ -18,6 +18,12 @@
     "btusb"
   ];
 
+  # possible fix for panel refresh rate battery saver issue
+  boot.kernelParams = [
+    "xe.enable_panel_replay=0"
+    "xe.enable_psr=1"
+  ];
+
   hardware.enableAllFirmware = true;
 
   networking.hostName = "yoga9intel";
@@ -27,13 +33,13 @@
   };
 
   # force refresh rate back to 120hz after resume from sleep
-  systemd.services.force-cpu-governor-resume = {
-    description = "Force CPU governor after resume";
-    wantedBy = [ "post-resume.target" ];
+  #  systemd.services.force-cpu-governor-resume = {
+  #   description = "Force CPU governor after resume";
+  #   wantedBy = [ "post-resume.target" ];
 
-    serviceConfig = {
-      Type = "oneshot";
-      ExecStart = "${pkgs.bash}/bin/bash -c 'for g in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo schedutil > $g; done'";
-    };
-  };
+  #   serviceConfig = {
+  #     Type = "oneshot";
+  #     ExecStart = "${pkgs.bash}/bin/bash -c 'for g in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo schedutil > $g; done'";
+  #   };
+  # };
 }

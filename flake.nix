@@ -17,24 +17,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-    };
-
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-
-    iio-hyprland = {
-      url = "github:JeanSchoeller/iio-hyprland";
-    };
-
-    hyprgrass = {
-      url = "github:horriblename/hyprgrass";
-      inputs.hyprland.follows = "hyprland";
-    };
-
     caelestia-shell = {
       url = "github:caelestia-dots/shell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -68,11 +50,6 @@
 
           home-manager.extraSpecialArgs = {
             inherit host inputs;
-            inherit (inputs)
-              caelestia-shell
-              iio-hyprland
-              hyprgrass
-              ;
           };
           home-manager.users.dylan = import ./30-home/dylan/default.nix;
         };
@@ -96,6 +73,8 @@
         };
     in
     {
+      formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt-tree;
+
       nixosConfigurations = {
         yoga9intel = mkHost "yoga9intel" ./40-hosts/yoga9intel/default.nix;
         vengeance = mkHost "vengeance" ./40-hosts/corsair-vengeance/default.nix;

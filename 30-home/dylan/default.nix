@@ -3,13 +3,13 @@
   pkgs,
   lib,
   host,
+  inputs,
   ...
-}@inputs:
+}:
 
 let
   hostModules = {
     yoga9intel = ./hosts/yoga9intel.nix;
-    vengeance = ./hosts/vengeance.nix;
   };
 
   hostModule = lib.attrByPath [ host ] null hostModules;
@@ -36,8 +36,8 @@ in
   programs.home-manager.enable = true;
 
   home.sessionVariables = {
-    EDITOR = "code";
-    VISUAL = "nvim";
+    EDITOR = "nvim";
+    VISUAL = "code";
     PAGER = "more";
 
   };
@@ -50,7 +50,7 @@ in
   # xdg.configFile."btop/btop.conf".source = ./source/btop/btop.conf;
 
   #### foot.ini for reference only. do not source. --> /nix/20-modules/common/shell.nix
-  xdg.configFile."foot/foot.ini".source = ./source/foot/foot.ini;
+  # xdg.configFile."foot/foot.ini".source = ./source/foot/foot.ini;
   # xdg.configFile."caelestia/shell.json".source = ./source/caelestia/shell.json;
   # xdg.configFile."caelestia/cli.json".source = ./source/caelestia/cli.json;
   #

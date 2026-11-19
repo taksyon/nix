@@ -13,5 +13,6 @@
             "align_continuous_rect_table_field": "true",
             "align_continuous_inline_comment": "true",
         },
+        "zenMode.fullScreen": false,
     },
 }

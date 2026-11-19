@@ -23,13 +23,12 @@
   # For Star Citizen
   boot.kernel.sysctl = {
     "vm.max_map_count" = 16777216;
-    "fs.file-max" = 524288;
+    # "fs.file-max" = 524288;
   };
 
   boot.kernelParams = [
     "zswap.enabled=1"
     "zswap.compressor=zstd"
-    "zswap.zpool=z3fold"
     "zswap.max_pool_percent=20"
   ];
 
