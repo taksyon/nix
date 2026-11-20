@@ -7,6 +7,7 @@
     ../common/roles/laptop.nix
     ./hardware-configuration.nix
     ./modules.nix
+    ../../20-modules/nixos/services/fingerprint.nix
   ];
 
   # change back to testing if sound no workey

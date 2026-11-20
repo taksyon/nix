@@ -40,4 +40,10 @@
     icon-theme = "Papirus-Dark";
     color-scheme = "prefer-dark";
   };
+
+  # Polkit authentication agent: shows the password / fingerprint prompt when an
+  # app asks for privileges (fprintd-enroll, mounting drives, pkexec, 1Password
+  # system unlock...). Without one, polkit silently denies those requests.
+  # Runs as a user service on graphical-session.target (started by UWSM).
+  services.hyprpolkitagent.enable = true;
 }
