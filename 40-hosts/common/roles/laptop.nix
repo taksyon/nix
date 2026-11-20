@@ -3,6 +3,7 @@
 {
   imports = [
     ../../../20-modules/nixos/apps/virtualisation.nix
+    ../../../20-modules/nixos/services/printing.nix
     ./graphical.nix
   ];
 

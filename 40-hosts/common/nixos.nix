@@ -33,7 +33,7 @@
     LC_NUMERIC = "en_US.UTF-8";
     LC_PAPER = "en_US.UTF-8";
     LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
+    LC_TIME = "C.UTF-8"; # 24-hour clock (keeps month-first dates, unlike en_GB)
   };
 
   console.keyMap = "us";
@@ -113,6 +113,7 @@
           private_browsing = true;
         };
         /*
+          # Microsoft outlook bugs out from this extension's dynamic tracking protection
           # Privacy Badger:
                "jid1-MnnxcxisBPnSXQ@jetpack" = {
                  install_url = "https://addons.mozilla.org/firefox/downloads/latest/jid1-MnnxcxisBPnSXQ@jetpack/latest.xpi";
